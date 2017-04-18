@@ -35,7 +35,7 @@ class TransactionsCreateRequest extends Request
         'date_transactions' => 'date_transactions',
         'date_loans'   => 'date_loans',
         'date_returns'    => 'date_returns',
-        'tot_paymets'   => 'tot_paymets'
+        'tot_payments'   => 'tot_payments'
     ];
 
     /**
@@ -54,7 +54,7 @@ class TransactionsCreateRequest extends Request
             'date_transactions' => 'required|max:60',
             'date_loans'   => 'required|max:30',
             'date_returns'    => 'required|max:225',
-            'tot_paymets'   => 'required|max:225'
+            'tot_payments'   => 'required|max:225'
         ];
     }
 

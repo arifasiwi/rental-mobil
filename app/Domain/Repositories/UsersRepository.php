@@ -47,7 +47,11 @@ class UsersRepository extends AbstractRepository implements UsersInterface, Crud
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'name', $search);
+   $indikatorbelanja = $this->model
+->where('name', 'like', '%' . $search . '%')
+->paginate($limit)
+->toArray();
+return $indikatorbelanja;
     }
 
     /**

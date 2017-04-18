@@ -65,7 +65,7 @@ class UsersController extends Controller
      * @apiParam {Float} phone phone of userss
      * @apiSuccess {Number} id id of userss
      */
-    public function store(UsersCreateRequest $request)
+    public function store(Request $request)
     {
         return $this->users->create($request->all());
     }
