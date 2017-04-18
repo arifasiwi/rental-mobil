@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
  * Class Contact
  * @package App\Domain\Entities
  */
-class Contact extends Model
+class Drivers extends Model
 {
     /**
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'address', 'phone',
+        'name', 'address', 'gender', 'ktp', 'phone',
     ];
 
 }

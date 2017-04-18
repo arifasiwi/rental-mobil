@@ -2,30 +2,30 @@
 
 namespace App\Domain\Repositories;
 
-use App\Domain\Entities\Contact;
-use App\Domain\Contracts\ContactInterface;
+use App\Domain\Entities\Drivers;
+use App\Domain\Contracts\DriversInterface;
 use App\Domain\Contracts\Crudable;
 
 
 /**
- * Class ContactRepository
+ * Class DriversRepository
  * @package App\Domain\Repositories
  */
-class ContactRepository extends AbstractRepository implements ContactInterface, Crudable
+class DriversRepository extends AbstractRepository implements DriversInterface, Crudable
 {
 
     /**
-     * @var Contact
+     * @var Drivers
      */
     protected $model;
 
     /**
-     * ContactRepository constructor.
-     * @param Contact $contact
+     * DriversRepository constructor.
+     * @param Drivers $drivers
      */
-    public function __construct(Contact $contact)
+    public function __construct(Drivers $drivers)
     {
-        $this->model = $contact;
+        $this->model = $drivers;
     }
 
     /**
@@ -59,8 +59,9 @@ class ContactRepository extends AbstractRepository implements ContactInterface, 
         // execute sql insert
         return parent::create([
             'name'    => e($data['name']),
-            'email'   => e($data['email']),
-            'address' => e($data['address']),
+            'gender'   => e($data['gender']),
+            'ktp' => e($data['ktp']),
+            'address'   => e($data['address']),
             'phone'   => e($data['phone'])
         ]);
 
@@ -75,8 +76,9 @@ class ContactRepository extends AbstractRepository implements ContactInterface, 
     {
         return parent::update($id, [
             'name'    => e($data['name']),
-            'email'   => e($data['email']),
-            'address' => e($data['address']),
+            'gender'   => e($data['gender']),
+            'ktp' => e($data['ktp']),
+            'address'   => e($data['address']),
             'phone'   => e($data['phone'])
         ]);
     }

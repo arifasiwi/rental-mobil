@@ -10,6 +10,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(ContactTableSeeder::class);
+        $this->call(drivers_table_seeder::class);
+        $this->call(cars_table_seeder::class);
+        $this->call(users_table_seeder::class);
+        $this->call(employees_table_seeder::class);
+        $this->call(transactions_table_seeder::class);
     }
 }

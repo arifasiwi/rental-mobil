@@ -6,7 +6,7 @@ namespace App\Domain\Contracts;
  * Interface ContactInterface
  * @package App\Domain\Contracts
  */
-interface ContactInterface {
+interface CarsInterface {
 
     /**
      * @param int $limit
