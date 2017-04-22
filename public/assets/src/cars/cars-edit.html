@@ -1,59 +1,99 @@
-<div class="alert {{alertset.class}} lighten-4 {{alertset.class}}-text text-darken-2 {{alertset.show}}">
-    <span ng-repeat="(key, value) in alertset.msg">{{value}}</span>
+<!-- start: PAGE TITLE -->
+<div ng-controller="CarsEditCtrl">
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle" > Edit Cars</h1>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">
+	{{alert.msg}}
+</uib-alert>
+<!-- end: PAGE TITLE -->
+<!-- start: FORM VALIDATION -->
+<div class="container-fluid container-fullw bg-white">
+	<div class="row">
+		<div class="col-md-12">
+			<div >
+				<form name="Form" >
+					<div class="row">
+						<div class="col-md-12">
+							<fieldset>
+
+								<div class="form-group" ng-class="{'has-error':Form.no_plat.$dirty && Form.name.$invalid, 'has-success':Form.no_plat.$valid}">
+									<label class="control-label">
+										 No_Plat <span class="symbol required"></span>
+									</label>
+									<input type="text" placeholder="Enter your No_Plat" class="form-control" name="no_plat" ng-model="myModel.no_plat"
+									 required />
+									<span class="error text-small block" ng-if="Form.no_plat.$dirty && Form.no_plat.$invalid">First Name is required</span>
+									<span class="success text-small" ng-if="Form.no_plati.$valid">Thank You!</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
+									<label class="control-label">
+										 Type <span class="symbol required"></span>
+									</label>
+									<input type="text" placeholder="Enter your Type" class="form-control" name="type" ng-model="myModel.type"
+									 required />
+									<span class="error text-small block" ng-if="Form.type.$dirty && Form.type.$invalid">First Type is required</span>
+									<span class="success text-small" ng-if="Form.type.$valid">Thank You!</span>
+								</div>
+
+								<!--<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
+									<label class="control-label">
+										Email <span class="symbol required"></span>
+									</label>
+									<input type="email" placeholder="Enter a valid E-mail" class="form-control" name="email" ng-model="myModel.email" required>
+									<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
+									<span class="error text-small block" ng-if="Form.email.$error.email">Please, enter a valid email address.</span>
+									<span class="success text-small" ng-if="Form.email.$valid">It's a valid e-mail!</span>
+								</div>-->
+
+								<div class="form-group" ng-class="{'has-error':Form.merk.$dirty && Form.merk.$invalid, 'has-success':Form.merk.$valid}">
+									<label class="control-label">
+										Merk <span class="symbol required"></span>
+									</label>
+									<input type="text" placeholder="Enter your Merk" class="form-control" name="merk" ng-model="myModel.merk"
+										   required />
+									<span class="error text-small block" ng-if="Form.merk.$dirty && Form.merk.$invalid">First Merk is required</span>
+									<span class="success text-small" ng-if="Form.merk.$valid">Thank You!</span>
+								</div>
+
+								<div class="form-group" ng-class="{'has-error':Form.color.$dirty && Form.color.$invalid, 'has-success':Form.color.$valid}">
+									<label class="control-label">
+										Color <span class="symbol required"></span>
+									</label>
+									<input type="text" placeholder="Enter your Color" class="form-control" name="color" ng-model="myModel.color"
+										   required />
+									<span class="error text-small block" ng-if="Form.color.$dirty && Form.color.$invalid">First Color is required</span>
+									<span class="success text-small" ng-if="Form.color.$valid">Thank You!</span>
+								</div>
+
+							</fieldset>
+						</div>
+						</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pull-left">
+								<button md-ink-ripple class="btn btn-primary" ng-click="updateData(true)"
+										ng-disabled="Form.$invalid || process">Simpan
+								</button>
+								<button type="reset" class="btn btn-primary btn-o" ng-disabled="process" ng-click="form.reset(Form)">
+									Reset
+								</button>
+								<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.cars"
+										ng-disabled="process">Kembali
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="card">
-    <div class="panel-heading bg-white" style="background: #428bca;">
-        <span class="font-bold"><left><font color="white">EDIT DATA URUSAN PEMERINTAH DAERAH</font></left></span>
-    </div>
-    <div ng-show="isLoading" layout="a" layout-sm="column" layout-align="space-around">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-    </div>
-    <form ng-show="isLoaded" name="editForm">
-        <div class="card-body">
-            <div class="panel-body" style="background: #b3e5fc;">
-                <div class="row row-sm">
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <div class="md-form-group">
-                                <label>Kode Rekening </label>
-                                <input class="form-control" placeholder="Kode Rekening"
-                                       ng-model="input.kode_rekening" type="text">
-                            </div>
-                            <span class="input-group-btn">
-                                <div class="m-b-md">
-                                    <button tooltip="Kode Rekening Terakhir"
-                                            class="btn btn-icon btn-rounded btn-info" type="button"
-                                            popover-title="Kode Rekening Terakhir"
-                                            popover="{{rekening_terakhir.msg}}" md-ink-ripple
-                                            popover-placement="bottom" popover-animation="true"
-                                            style="margin-top: 45px;">
-                                        <i class="mdi-action-info-outline i-24"></i>
-                                    </button>
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-sm">
-                    <div class="col-sm-12">
-                        <div class="md-form-group">
-                            <div class="input-field">
-                                <label>Urusan</label>
-                                <input class="form-control" placeholder="Urusan"
-                                       ng-model="input.urusan" type="text">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="panel-footer text-center" style="background: #269abc">
-                <button md-ink-ripple class="md-btn md-raised m-b btn-fw blue" ng-click="updateData()"
-                        ng-disabled="addForm.$invalid || process">Simpan
-                </button>
-                <button md-ink-ripple class="md-btn md-raised m-b btn-fw bg-white" ui-sref="app.urusan"
-                        ng-disabled="process">Kembali
-                </button>
-            </footer>
-        </div>
-    </form>
-</div>
+	</div>
+<!-- end: FORM VALIDATION -->

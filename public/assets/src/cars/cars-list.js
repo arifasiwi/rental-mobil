@@ -34,7 +34,7 @@ app.controller('CarsCtrl', ['$scope', 'cars', 'SweetAlert', '$http','$timeout', 
     };
     // go to print preview page
     $scope.print = function () {
-        window.open ('../api/v1/cetak-urusan','_blank');
+        window.open ('../api/v1/cetak-cars','_blank');
     };
     //Init dataAkun
     $scope.dataCars = '';
@@ -161,7 +161,7 @@ app.controller('CarsCtrl', ['$scope', 'cars', 'SweetAlert', '$http','$timeout', 
 //             .targetEvent(id);
 //         //
 //         $mdDialog.show(confirm).then(function () {
-//             urusan.destroy(id)
+//             cars.destroy(id)
 //                 .success(function (data) {
 //                     if (data.success == true) {
 //                         $scope.showToast('green', 'Data Berhasil Dihapus');
@@ -188,7 +188,7 @@ app.controller('CarsCtrl', ['$scope', 'cars', 'SweetAlert', '$http','$timeout', 
             closeOnCancel: false
         }, function (isConfirm) {
             if (isConfirm) {
-                urusan.destroy(id)
+                cars.destroy(id)
                     .success(function (data) {
                         if (data.success == true) {
                             SweetAlert.swal({

@@ -42,34 +42,29 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
             label: 'Dashboard'
         }
     })
-    //urusan
+    //cars
         .state('app.cars-list', {
             url: '/cars',
             templateUrl: 'assets/src/cars/cars-list.html',
             title: 'Data Cars',
             resolve: loadSequence('cars-list', 'cars-service'),
-            // ncyBreadcrumb: {
-            //     label: 'Dashboard'
-            // }
-
+        
         })
-        // //urusan Create
-        // .state('app.urusan-create', {
-        //     url: '/urusan-create',
-        //     templateUrl: 'assets//src/urusan/urusan/urusan-create.html',
-        //     data: {title: 'Tambah Data Urusan Pemerintah Daerah'},
-        //     controller: 'UrusanCreateCtrl',
-        //     resolve: load(['assets//src/urusan/urusan/urusan-service.js', 'assets//src/urusan/urusan/UrusanCreateCtrl.js'])
-        // })
-        //
-        // //urusan Edit
-        // .state('app.urusan-edit', {
-        //     url: '/urusan-edit/:id',
-        //     templateUrl: 'assets//src/urusan/urusan/urusan-edit.html',
-        //     data: {title: 'Edit Data Urusan Pemerintah Daerah'},
-        //     controller: 'UrusanEditCtrl',
-        //     resolve: load(['assets//src/urusan/urusan/urusan-service.js', 'assets//src/urusan/urusan/UrusanEditCtrl.js'])
-        // })
+        //cars Create
+        .state('app.cars-create', {
+           url: '/cars',
+            templateUrl: 'assets/src/cars/cars-create.html',
+            title: 'Data Cars',
+            resolve: loadSequence('cars-list', 'cars-service'),
+        })
+        
+        //cars Edit
+        .state('app.cars-edit', {
+            url: '/cars',
+            templateUrl: 'assets/src/cars/cars-edit.html',
+            title: 'Data Cars',
+            resolve: loadSequence('cars-list', 'cars-service'),
+        })
 
 
 

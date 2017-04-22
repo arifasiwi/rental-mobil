@@ -3,9 +3,9 @@
 namespace App\Http\Requests\Cars;
 
 use App\Http\Requests\Request;
-
+use Illuminate\Contracts\Validation\Validator;
 /**
- * Class UserCreateRequest
+ * type UserCreateRequest
  *
  * @package App\Http\Requests\User
  */
@@ -58,6 +58,20 @@ class CarsCreateRequest extends Request
     public function validator($validator)
     {
         return $validator->make($this->all(), $this->container->call([$this, 'rules']), $this->messages(), $this->attrs);
+    }
+
+    public function formatErrors(Validator $validator)
+    {
+        $message = $validator->errors();
+        return [
+            'success'    => false,
+            'validation' => [
+                'no_plat' => $message->first('no_plat'),
+                'type' => $message->first('type'),
+                'merk' => $message->first('merk'),
+                'color' => $message->first('color'),
+            ]
+        ];
     }
 
 }

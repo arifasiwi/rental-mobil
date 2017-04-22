@@ -55,6 +55,8 @@ app.constant('JS_REQUIRES', {
         'dynamicTableCtrl': 'assets/js/controllers/dynamicTableCtrl.js',
         'NotificationIconsCtrl': 'assets/js/controllers/notificationIconsCtrl.js',
         'cars-list'    : 'assets/src/cars/cars-list.js',
+        'cars-create'    : 'assets/src/cars/cars-create.js',
+        'cars-edit'    : 'assets/src/cars/cars-edit.js',
         'cars-service': 'assets/src/cars/cars-service.js',
         
         //*** Filters
