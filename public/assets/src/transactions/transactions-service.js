@@ -1,21 +1,21 @@
 /**
  * Created by - LENOVO - on 24/08/2015.
  */
-app.factory('urusan', ['$http', function ($http) {
+app.factory('transactions', ['$http', function ($http) {
     return {
         // get data dengan pagination dan pencarian data
         get: function (page, term) {
             return $http({
                 method: 'get',
-                url: '/api/members?page=' + page + '&term=' + term,
+                url: '/api/transactions?page=' + page + '&term=' + term,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
             });
         },
 
-        getLastmembers: function () {
+        getLasttransactions: function () {
             return $http({
                 method: 'get',
-                url: '/api/get-last-members',
+                url: '/api/get-last-transactions',
             });
         },
 
@@ -23,7 +23,7 @@ app.factory('urusan', ['$http', function ($http) {
         store: function (inputData) {
             return $http({
                 method: 'POST',
-                url: '/api/members',
+                url: '/api/transactions',
                 data: $.param(inputData)
             });
         },
@@ -32,14 +32,14 @@ app.factory('urusan', ['$http', function ($http) {
         show: function (_id) {
             return $http({
                 method: 'get',
-                url: '/api/members/' + _id,
+                url: '/api/transactions/' + _id,
             });
         },
 
         destroy: function (_id) {
             return $http({
                 method: 'delete',
-                url: '/api/members/' + _id,
+                url: '/api/transactions/' + _id,
             });
         },
 
@@ -47,14 +47,14 @@ app.factory('urusan', ['$http', function ($http) {
         update: function (inputData) {
             return $http({
                 method: 'put',
-                url: '/api/members/' + inputData.id,
+                url: '/api/transactions/' + inputData.id,
                 data: $.param(inputData)
             });
         },
         kunci: function (_id) {
             return $http({
                 method: 'put',
-                url: '/api/kunci-members/' + _id
+                url: '/api/kunci-transactions/' + _id
             });
         },
 

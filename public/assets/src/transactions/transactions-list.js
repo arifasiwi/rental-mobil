@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('UrusanCtrl', ['$scope', 'urusan', 'SweetAlert', '$http','$timeout', function ($scope, urusan,SweetAlert) {
+app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$http','$timeout', function ($scope, transactions,SweetAlert) {
 //urussan tampilan
     $scope.main = {
         page: 1,
@@ -34,19 +34,19 @@ app.controller('UrusanCtrl', ['$scope', 'urusan', 'SweetAlert', '$http','$timeou
     };
     // go to print preview page
     $scope.print = function () {
-        window.open ('../api/v1/cetak-urusan','_blank');
+        window.open ('../api/v1/cetak-transactions','_blank');
     };
     //Init dataAkun
-    $scope.dataMembers = '';
+    $scope.dataTransactions = '';
     // init get data
-    urusan.get($scope.main.page, $scope.main.term)
+    transactions.get($scope.main.page, $scope.main.term)
         .success(function (data) {
 
             //Change Loading status
             $scope.setLoader(false);
 
             // result data
-            $scope.dataMembers = data.data;
+            $scope.dataTransactions = data.data;
             // set the current page
             $scope.current_page = data.current_page;
 
@@ -77,14 +77,14 @@ app.controller('UrusanCtrl', ['$scope', 'urusan', 'SweetAlert', '$http','$timeou
         //Start loading
         $scope.setLoader(true);
 
-        urusan.get($scope.main.page, $scope.main.term)
+        transactions.get($scope.main.page, $scope.main.term)
             .success(function (data) {
 
                 //Stop loading
                 $scope.setLoader(false);
 
                 // result data
-                $scope.dataMembers = data.data;
+                $scope.dataTransactions = data.data;
 
                 // set the current page
                 $scope.current_page = data.current_page;
@@ -161,7 +161,7 @@ app.controller('UrusanCtrl', ['$scope', 'urusan', 'SweetAlert', '$http','$timeou
 //             .targetEvent(id);
 //         //
 //         $mdDialog.show(confirm).then(function () {
-//             urusan.destroy(id)
+//             transactions.destroy(id)
 //                 .success(function (data) {
 //                     if (data.success == true) {
 //                         $scope.showToast('green', 'Data Berhasil Dihapus');
@@ -188,7 +188,7 @@ app.controller('UrusanCtrl', ['$scope', 'urusan', 'SweetAlert', '$http','$timeou
             closeOnCancel: false
         }, function (isConfirm) {
             if (isConfirm) {
-                urusan.destroy(id)
+                transactions.destroy(id)
                     .success(function (data) {
                         if (data.success == true) {
                             SweetAlert.swal({

@@ -18,7 +18,7 @@
 <!-- end: SEARCH FORM -->
 <!-- start: MAIN NAVIGATION MENU -->
 <div class="navbar-title">
-	<span translate="sidebar.heading.NAVIGATION">Main Navigation</span>
+	<span translate="sidebar.heading.NAVIGATION"> RenCars </span>
 </div>
 <ul class="main-navigation-menu">
 	<li ui-sref-active="active">
@@ -49,6 +49,63 @@
 				</div>-->
 			</div>
 		</a>
+	</li>
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<a ui-sref="app.drivers-list">
+					<span class="title"> Drivers </span>
+					 <i class="icon icon-envelope"></i>
+				</div>
+			</div>
+		</a>
+	</li>
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<a ui-sref="app.employees-list">
+					<span class="title"> Employees </span>
+					 <i class="icon icon-envelope"></i>
+				</div>
+			</div>
+		</a>
+	</li>
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<a ui-sref="app.users-list">
+					<span class="title"> Users </span>
+					 <i class="icon icon-envelope"></i>
+				</div>
+			</div>
+		</a>
+	</li>
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<a ui-sref="app.transactions-list">
+					<span class="title"> Transactions </span>
+					 <i class="icon icon-envelope"></i>
+				</div>
+			</div>
+		</a>
+	</li>
 		<!--<ul class="sub-menu">
 			<li ui-sref-active="active">
 				<a ui-sref="app.members">
@@ -127,7 +184,7 @@
 			</li>
 		</ul>
 	</li>-->
-	<li ng-class="{'active open':$state.includes('app.table')}">
+	<!--<li ng-class="{'active open':$state.includes('app.table')}">
 		<a href="javascript:void(0)">
 			<div class="item-content">
 				<div class="item-media">
@@ -401,8 +458,8 @@
 				</ul>
 			</li>
 		</ul>
-	</li>
-	<li>
+	</li>-->
+	<!--<li>
 		<a href="javascript:void(0)">
 			<div class="item-content">
 				<div class="item-media">
@@ -659,10 +716,10 @@
 			</div>
 		</a>
 	</li>
-</ul>
+</ul>-->
 <!-- end: MAIN NAVIGATION MENU -->
 <!-- start: CORE FEATURES -->
-<div class="navbar-title">
+<!--<div class="navbar-title">
 	<span translate="sidebar.heading.FEATURES">Core Features</span>
 </div>
 <ul class="folders">
@@ -690,13 +747,13 @@
 			</div>
 		</a>
 	</li>
-</ul>
+</ul>-->
 <!-- end: CORE FEATURES -->
 <!-- start: DOCUMENTATION BUTTON -->
-<div class="wrapper">
+<!--<div class="wrapper">
 	<a ui-sref="app.documentation" class="button-o">
 		<i class="ti-help"></i>
 		<span translate="sidebar.heading.DOCUMENTATION">Documentation</span>
 	</a>
-</div>
+</div>-->
 <!-- end: DOCUMENTATION BUTTON -->

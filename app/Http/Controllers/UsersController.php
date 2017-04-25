@@ -84,7 +84,7 @@ class UsersController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(UsersEditRequest $request, $id)
+    public function update(UsersCreateRequest $request, $id)
     {
         return $this->users->update($id, $request->all());
     }

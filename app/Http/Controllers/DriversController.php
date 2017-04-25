@@ -84,7 +84,7 @@ class DriversController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(DriversEditRequest $request, $id)
+    public function update(DriversCreateRequest $request, $id)
     {
         return $this->drivers->update($id, $request->all());
     }

@@ -84,7 +84,7 @@ class TransactionsController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(TransactionsEditRequest $request, $id)
+    public function update(TransactionsCreateRequest $request, $id)
     {
         return $this->transactions->update($id, $request->all());
     }

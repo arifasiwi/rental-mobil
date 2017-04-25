@@ -54,10 +54,32 @@ app.constant('JS_REQUIRES', {
         'chatCtrl': 'assets/js/controllers/chatCtrl.js',
         'dynamicTableCtrl': 'assets/js/controllers/dynamicTableCtrl.js',
         'NotificationIconsCtrl': 'assets/js/controllers/notificationIconsCtrl.js',
+        
         'cars-list'    : 'assets/src/cars/cars-list.js',
         'cars-create'    : 'assets/src/cars/cars-create.js',
         'cars-edit'    : 'assets/src/cars/cars-edit.js',
         'cars-service': 'assets/src/cars/cars-service.js',
+        
+        'drivers-list'    : 'assets/src/drivers/drivers-list.js',
+        'drivers-create'    : 'assets/src/drivers/drivers-create.js',
+        'drivers-edit'    : 'assets/src/drivers/drivers-edit.js',
+        'drivers-service': 'assets/src/drivers/drivers-service.js',
+
+        'employees-list'    : 'assets/src/employees/employees-list.js',
+        'employees-create'    : 'assets/src/employees/employees-create.js',
+        'employees-edit'    : 'assets/src/employees/employees-edit.js',
+        'employees-service': 'assets/src/employees/employees-service.js',
+
+        'users-list'    : 'assets/src/users/users-list.js',
+        'users-create'    : 'assets/src/users/users-create.js',
+        'users-edit'    : 'assets/src/users/users-edit.js',
+        'users-service': 'assets/src/users/users-service.js',
+
+        'transactions-list'    : 'assets/src/transactions/transactions-list.js',
+        'transactions-create'    : 'assets/src/transactions/transactions-create.js',
+        'transactions-edit'    : 'assets/src/transactions/transactions-edit.js',
+        'transactions-service': 'assets/src/transactions/transactions-service.js',
+
         
         //*** Filters
         'htmlToPlaintext': 'assets/js/filters/htmlToPlaintext.js'

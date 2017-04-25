@@ -84,7 +84,7 @@ class EmployeesController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(EmployeesEditRequest $request, $id)
+    public function update(EmployeesCreateRequest $request, $id)
     {
         return $this->employees->update($id, $request->all());
     }

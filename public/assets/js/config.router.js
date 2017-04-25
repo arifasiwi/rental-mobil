@@ -67,6 +67,107 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         })
 
 
+    //drivers
+        .state('app.drivers-list', {
+            url: '/drivers-list',
+            templateUrl: 'assets/src/drivers/drivers-list.html',
+            title: 'Data Drivers',
+            resolve: loadSequence('drivers-list', 'drivers-service'),
+        
+        })
+        //drivers Create
+        .state('app.drivers-create', {
+           url: '/drivers-create',
+            templateUrl: 'assets/src/drivers/drivers-create.html',
+            title: 'Data Drivers',
+            resolve: loadSequence('drivers-create', 'drivers-service'),
+        })
+        
+        //drivers Edit
+        .state('app.drivers-edit', {
+            url: '/drivers-edit/:id',
+            templateUrl: 'assets/src/drivers/drivers-edit.html',
+            title: 'Data Drivers',
+            resolve: loadSequence('drivers-edit', 'drivers-service'),
+        })
+
+    //employees
+        .state('app.employees-list', {
+            url: '/employees-list',
+            templateUrl: 'assets/src/employees/employees-list.html',
+            title: 'Data Employees',
+            resolve: loadSequence('employees-list', 'employees-service'),
+        
+        })
+        //employees Create
+        .state('app.employees-create', {
+           url: '/employees-create',
+            templateUrl: 'assets/src/employees/employees-create.html',
+            title: 'Data Employees',
+            resolve: loadSequence('employees-create', 'employees-service'),
+        })
+        
+        //employees Edit
+        .state('app.employees-edit', {
+            url: '/employees-edit/:id',
+            templateUrl: 'assets/src/employees/employees-edit.html',
+            title: 'Data Employees',
+            resolve: loadSequence('employees-edit', 'employees-service'),
+        })
+
+
+    //users
+        .state('app.users-list', {
+            url: '/users-list',
+            templateUrl: 'assets/src/users/users-list.html',
+            title: 'Data Users',
+            resolve: loadSequence('users-list', 'users-service'),
+        
+        })
+        //users Create
+        .state('app.users-create', {
+           url: '/users-create',
+            templateUrl: 'assets/src/users/users-create.html',
+            title: 'Data Users',
+            resolve: loadSequence('users-create', 'users-service'),
+        })
+        
+        //users Edit
+        .state('app.users-edit', {
+            url: '/users-edit/:id',
+            templateUrl: 'assets/src/users/users-edit.html',
+            title: 'Data Users',
+            resolve: loadSequence('users-edit', 'users-service'),
+        })
+
+    //transactions
+        .state('app.transactions-list', {
+            url: '/transactions-list',
+            templateUrl: 'assets/src/transactions/transactions-list.html',
+            title: 'Data Transactions',
+            resolve: loadSequence('transactions-list', 'transactions-service'),
+        
+        })
+        //transactions Create
+        .state('app.transactions-create', {
+           url: '/transactions-create',
+            templateUrl: 'assets/src/transactions/transactions-create.html',
+            title: 'Data Transactions',
+            resolve: loadSequence('transactions-create', 'transactions-service'),
+        })
+        
+        //transactions Edit
+        .state('app.transactions-edit', {
+            url: '/transactions-edit/:id',
+            templateUrl: 'assets/src/transactions/transactions-edit.html',
+            title: 'Data Transactions',
+            resolve: loadSequence('transactions-edit', 'transactions-service'),
+        })
+
+
+
+
+        
 
         .state('app.ui', {
         url: '/ui',
