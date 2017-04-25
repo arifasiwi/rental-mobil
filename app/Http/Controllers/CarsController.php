@@ -84,7 +84,7 @@ class CarsController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(CarsEditRequest $request, $id)
+    public function update(CarsCreateRequest $request, $id)
     {
         return $this->cars->update($id, $request->all());
     }

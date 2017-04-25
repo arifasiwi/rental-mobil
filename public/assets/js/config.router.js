@@ -44,7 +44,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     })
     //cars
         .state('app.cars-list', {
-            url: '/cars',
+            url: '/cars-list',
             templateUrl: 'assets/src/cars/cars-list.html',
             title: 'Data Cars',
             resolve: loadSequence('cars-list', 'cars-service'),
@@ -52,18 +52,18 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         })
         //cars Create
         .state('app.cars-create', {
-           url: '/cars',
+           url: '/cars-create',
             templateUrl: 'assets/src/cars/cars-create.html',
             title: 'Data Cars',
-            resolve: loadSequence('cars-list', 'cars-service'),
+            resolve: loadSequence('cars-create', 'cars-service'),
         })
         
         //cars Edit
         .state('app.cars-edit', {
-            url: '/cars/:id',
+            url: '/cars-edit/:id',
             templateUrl: 'assets/src/cars/cars-edit.html',
             title: 'Data Cars',
-            resolve: loadSequence('cars-list', 'cars-service'),
+            resolve: loadSequence('cars-edit', 'cars-service'),
         })
 
 

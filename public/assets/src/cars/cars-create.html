@@ -22,14 +22,14 @@
 						<div class="col-md-12">
 							<fieldset>
 
-								<div class="form-group" ng-class="{'has-error':Form.no_plat.$dirty && Form.name.$invalid, 'has-success':Form.no_plat.$valid}">
+								<div class="form-group" ng-class="{'has-error':Form.no_plat.$dirty && Form.no_plat.$invalid, 'has-success':Form.no_plat.$valid}">
 									<label class="control-label">
 										 No_Plat <span class="symbol required"></span>
 									</label>
 									<input type="text" placeholder="Enter your No_Plat" class="form-control" name="no_plat" ng-model="myModel.no_plat"
 									 required />
 									<span class="error text-small block" ng-if="Form.no_plat.$dirty && Form.no_plat.$invalid">First Name is required</span>
-									<span class="success text-small" ng-if="Form.no_plati.$valid">Thank You!</span>
+									<span class="success text-small" ng-if="Form.no_plat.$valid">Thank You!</span>
 								</div>
 								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
 									<label class="control-label">
@@ -87,7 +87,7 @@
 								<button type="reset" class="btn btn-primary btn-o" ng-disabled="process" ng-click="form.reset(Form)">
 									Reset
 								</button>
-								<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.cars"
+								<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.cars-list"
 										ng-disabled="process">Kembali
 								</button>
 							</div>

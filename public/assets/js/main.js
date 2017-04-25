@@ -33,7 +33,13 @@ function ($rootScope, $state, $stateParams) {
             logo: 'assets/images/logo.png', // relative path of the project logo
         }
     };
-    $rootScope.user = {
+	$rootScope.sup = function () {
+		$("div, .ng-scope").animate({
+			scrollTop: 0
+		}, "slow");
+	}
+
+	$rootScope.user = {
         name: 'Peter',
         job: 'ng-Dev',
         picture: 'app/img/user/02.jpg'

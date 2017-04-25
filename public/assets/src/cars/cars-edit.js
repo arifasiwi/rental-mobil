@@ -68,7 +68,7 @@ app.controller('CarsEditCtrl', ['$state', '$scope', 'cars','$timeout', 'SweetAle
                     if (data.updated == true) {
                         //If back to list after submitting
                         if (isBack == true) {
-                            $state.go('app.cars');
+                            $state.go('app.cars-list');
                             $scope.toaster = {
                                 type: 'success',
                                 title: 'Sukses',
