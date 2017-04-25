@@ -60,7 +60,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         
         //cars Edit
         .state('app.cars-edit', {
-            url: '/cars',
+            url: '/cars/:id',
             templateUrl: 'assets/src/cars/cars-edit.html',
             title: 'Data Cars',
             resolve: loadSequence('cars-list', 'cars-service'),

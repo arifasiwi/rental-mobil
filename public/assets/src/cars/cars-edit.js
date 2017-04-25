@@ -1,7 +1,8 @@
-app.controller('CarsEditCtrl', ['$state', '$scope', 'cars','$timeout', 'SweetAlert','toaster','$http', function ($state, $scope, cars,$timeout, SweetAlert,toaster) {
+app.controller('CarsEditCtrl', ['$state', '$scope', 'cars','$timeout', 'SweetAlert','toaster', '$stateParams', '$http', function ($state, $scope, cars,$timeout, SweetAlert,toaster,$stateParams) {
     //Init input addForm variable
     //create cars
     $scope.process = false;
+    $scope.id=$scope.$stateParams.id
 
     $scope.master = $scope.myModel;
     $scope.form = {
@@ -48,7 +49,11 @@ app.controller('CarsEditCtrl', ['$state', '$scope', 'cars','$timeout', 'SweetAle
         $scope.myModel.merk= null;
         $scope.myModel.color= null;
     };
-
+//Run Ajax
+    cars.show($scope.id)
+        .success(function (data) {
+            $scope.myModel= data;
+        });
     $scope.updateData = function (isBack) {
         $scope.alerts = [];
         //Set process status
@@ -128,5 +133,6 @@ app.controller('CarsEditCtrl', ['$state', '$scope', 'cars','$timeout', 'SweetAle
                 });
         }
     };
+    
 
 }]);
