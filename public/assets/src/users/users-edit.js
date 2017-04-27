@@ -1,75 +1,53 @@
-app.controller('UserEditCtrl', ['$state', '$scope', 'user', '$mdToast', '$stateParams', function ($state, $scope, user, $mdToast, $stateParams) {
-    // Edit Bidang
+app.controller('UsersEditCtrl', ['$state', '$scope', 'users','$timeout', 'SweetAlert','toaster','$http','$stateParams', function ($state, $scope, users, $timeout, SweetAlert,toaster, $stateParams) {
     $scope.id = $scope.$stateParams.id;
+    //edit users
     //If Id is empty, then redirected
     if ($scope.id == null || $scope.id == '') {
-        $state.go("app.user")
+        $state.go("app.users")
     }
-    $scope.objLvl = [];
-    $scope.objUptd = [];
-    $scope.objSkpd = [];
-    $scope.loadUptd = true;
-    $scope.loadSkpd = true;
+    $scope.master = $scope.myModel;
+    $scope.form = {
 
-    $scope.isLoading = true;
-    $scope.isLoaded = false;
+        submit: function (form) {
+            var firstError = null;
+            if (form.$invalid) {
 
-    $scope.setLoader = function (status) {
-        if (status == true) {
-            $scope.isLoading = true;
-            $scope.isLoaded = false;
-        } else {
-            $scope.isLoading = false;
-            $scope.isLoaded = true;
-        }
-    };
-//fjoepgore
-    $scope.setLoader(true);
+                var field = null, firstError = null;
+                for (field in form) {
+                    if (field[0] != '$') {
+                        if (firstError === null && !form[field].$valid) {
+                            firstError = form[field].$name;
+                        }
 
-    //Init input form variable
-    $scope.input = {};
-    //Set process status to false
-    $scope.process = false;
+                        if (form[field].$pristine) {
+                            form[field].$dirty = true;
+                        }
+                    }
+                }
+                angular.element('.ng-invalid[name=' + firstError + ']').focus();
+                SweetAlert.swal("The form cannot be submitted because it contains validation errors!", "Errors are marked with a red, dashed border!", "error");
+                return;
 
-    //Init Alert status
-    $scope.alertset = {
-        show: 'hide',
-        class: 'green',
-        msg: ''
-    };
-
-    $scope.objLvl = [
-
-        {nama: 'Silahkan pilih', id: 0},
-        {nama: 'Administrator', id: 100},
-        {nama: 'Kontributor', id: 101},
-        {nama: 'Verifikator', id: 102},
-        {nama: 'Operator', id: 103},
-        {nama: 'Users', id: 104},
-    ];
-    $scope.getLvl = function (id) {
-        for (var i = 0; i < $scope.objLvl.length; i++) {
-            if (parseInt($scope.objLvl[i].id) === parseInt(id, 10)) {
-                return $scope.objLvl[i];
+            } else {
+                SweetAlert.swal("Good job!", "Your form is ready to be submitted!", "success");
+                //your code for submit
             }
-        }
-    };
-    //Run Ajax yang langsung ada data
-    //drop down edit yang ada data
-    user.show($scope.id)
-        .success(function (data) {
-            //$scope.setLoader(false);
-            $scope.input.id = data.id;
-            $scope.input.nip= data.nip;
-            $scope.input.name = data.name;
-            $scope.input.no_telp = data.no_telp;
-            $scope.input.email = data.email;
-            $scope.input.level = data.level.id;
-            $scope.input.skpd_id = data.skpd.id;
-            $scope.input.uptd_id = data.uptd.id;
-//drop down edit skpd
-        });
 
+        },
+        reset: function (form) {
+
+            $scope.myModel = angular.copy($scope.master);
+            form.$setPristine(true);
+        }
+
+    };
+
+
+    //Run Ajax
+    users.show($scope.id)
+        .success(function (data) {
+            $scope.myModel= data;
+        });
     //Submit Data
     $scope.updateData = function () {
 
@@ -80,16 +58,16 @@ app.controller('UserEditCtrl', ['$state', '$scope', 'user', '$mdToast', '$stateP
         $scope.alertset.show = 'hide';
 
         //Check validation status
-        if ($scope.editForm.$valid) {
+        if ($scope.myModel.$valid) {
             //run Ajax
-            user.update($scope.input)
+            users.update($scope.myModel)
                 .success(function (data) {
                     if (data.success == true) {
                         //If back to list after submitting
                         if (isBack = true) {
                             //Redirect to akun
                             $scope.alertset.show = 'hide';
-                            $state.go('app.user');
+                            $state.go('app.users-list');
                             $scope.showToast('green', 'Edit Data Berhasil !');
                         }
                     } else {
@@ -103,7 +81,6 @@ app.controller('UserEditCtrl', ['$state', '$scope', 'user', '$mdToast', '$stateP
                     $scope.alertset.msg = data.result;
 
                 })
-
                 .error(function (data, status) {
                     switch (status) {
                         case 401 :
@@ -130,21 +107,4 @@ app.controller('UserEditCtrl', ['$state', '$scope', 'user', '$mdToast', '$stateP
         }
     };
 
-    function findWithAttr(array, attr, value) {
-        for (var i = 0; i < array.length; i += 1) {
-            if (array[i][attr] === value) {
-                return i;
-            }
-        }
-    }
-    $scope.showToast = function (warna, msg) {
-        $mdToast.show({
-            //controller: 'AkunToastCtrl',
-            template: "<md-toast class='" + warna + "-500'><span flex> " + msg + "</span></md-toast> ",
-            //templateUrl: 'views/ui/material/toast.tmpl.html',
-            hideDelay: 6000,
-            parent: '#toast',
-            position: 'top right'
-        });
-    };
 }]);

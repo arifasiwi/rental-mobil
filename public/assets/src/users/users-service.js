@@ -1,39 +1,21 @@
-app.factory('user', ['$http', function ($http) {
-
+/**
+ * Created by - LENOVO - on 24/08/2015.
+ */
+app.factory('users', ['$http', function ($http) {
     return {
-        //Get List Urusan
-
-
-        getUptd: function (id) {
-            return $http({
-                method: 'get',
-                url: '/api/v1/get-list-uptd/' + id
-            });
-        },
-
-        getSkpd: function () {
-            return $http({
-                method: 'get',
-                url: '/api/v1/get-list-skpd'
-            });
-        },
-
         // get data dengan pagination dan pencarian data
         get: function (page, term) {
             return $http({
                 method: 'get',
-                url: '/api/v1/get-user-by-backoffice?page=' + page + '&term=' + term
+                url: '/api/users?page=' + page + '&term=' + term,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
             });
         },
-        getDetail: function (inputData) {
+
+        getLastmembers: function () {
             return $http({
                 method: 'get',
-                url: '/api/v1/user-detail'
-            });
-        },      getlihat: function (inputData) {
-            return $http({
-                method: 'get',
-                url: '/api/v1/get-session-user'
+                url: '/api/get-last-users',
             });
         },
 
@@ -41,69 +23,38 @@ app.factory('user', ['$http', function ($http) {
         store: function (inputData) {
             return $http({
                 method: 'POST',
-                url: '/api/v1/create-by-back-office',
+                url: '/api/users',
                 data: $.param(inputData)
             });
         },
+
         //Tampil Data
         show: function (_id) {
             return $http({
                 method: 'get',
-                url: '/api/v1/user/' + _id
+                url: '/api/users/' + _id,
             });
         },
 
         destroy: function (_id) {
             return $http({
                 method: 'delete',
-                url: '/api/v1/user/' + _id
+                url: '/api/users/' + _id,
             });
         },
 
+        //Update data
         update: function (inputData) {
             return $http({
                 method: 'put',
-                url: '/api/v1/update-by-back-office/' + inputData.id,
-                data: $.param(inputData)
-            });
-        },
-        updateIsaktif: function (inputData) {
-            return $http({
-                method: 'put',
-                url: '/api/v1/is-active/' + inputData.id,
-                data: $.param(inputData)
-            });
-        },
-        detail: function (_id) {
-            return $http({
-                method: 'get',
-                url: '/api/v1/user/' + _id,
-            });
-        },
-        //Update data
-        gantiPass: function (inputData) {
-            return $http({
-                method: 'put',
-                url: '/api/v1/update-pass/',
+                url: '/api/users/' + inputData.id,
                 data: $.param(inputData)
             });
         },
         kunci: function (_id) {
             return $http({
                 method: 'put',
-                url: '/api/v1/kunci-user/' + _id
-            });
-        },
-        aktif: function (_id) {
-            return $http({
-                method: 'put',
-                url: '/api/v1/aktif-user/' + _id
-            });
-        },
-        getbatas: function () {
-            return $http({
-                method: 'put',
-                url: '/api/v1/getbatas-user'
+                url: '/api/kunci-users/' + _id
             });
         },
 
