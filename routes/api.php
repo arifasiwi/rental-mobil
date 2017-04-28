@@ -22,3 +22,4 @@ Route::resource('transactions','TransactionsController');
 Route::resource('employees','EmployeesController');
 Route::resource('drivers','DriversController');
 Route::resource('users','UsersController');
+Route::resource('customers','CustomersController');

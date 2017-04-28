@@ -91,28 +91,28 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
             resolve: loadSequence('drivers-edit', 'drivers-service'),
         })
 
-    //employees
-        .state('app.employees-list', {
-            url: '/employees-list',
-            templateUrl: 'assets/src/employees/employees-list.html',
-            title: 'Data Employees',
-            resolve: loadSequence('employees-list', 'employees-service'),
+    //customers
+        .state('app.customers-list', {
+            url: '/customers-list',
+            templateUrl: 'assets/src/customers/customers-list.html',
+            title: 'Data Customers',
+            resolve: loadSequence('customers-list', 'customers-service'),
         
         })
-        //employees Create
-        .state('app.employees-create', {
-           url: '/employees-create',
-            templateUrl: 'assets/src/employees/employees-create.html',
-            title: 'Data Employees',
-            resolve: loadSequence('employees-create', 'employees-service'),
+        //customers Create
+        .state('app.customers-create', {
+           url: '/customers-create',
+            templateUrl: 'assets/src/customers/customers-create.html',
+            title: 'Data Customers',
+            resolve: loadSequence('customers-create', 'customers-service'),
         })
         
-        //employees Edit
-        .state('app.employees-edit', {
-            url: '/employees-edit/:id',
-            templateUrl: 'assets/src/employees/employees-edit.html',
-            title: 'Data Employees',
-            resolve: loadSequence('employees-edit', 'employees-service'),
+        //customers Edit
+        .state('app.customers-edit', {
+            url: '/customers-edit/:id',
+            templateUrl: 'assets/src/customers/customers-edit.html',
+            title: 'Data Customers',
+            resolve: loadSequence('customers-edit', 'customers-service'),
         })
 
 

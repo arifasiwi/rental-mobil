@@ -1,9 +1,9 @@
 <!-- start: PAGE TITLE -->
-<div ng-controller="EmployeesEditCtrl">
+<div ng-controller="CustomersEditCtrl">
 <section id="page-title">
 	<div class="row">
 		<div class="col-sm-8">
-			<h1 class="mainTitle" > Edit Employees</h1>
+			<h1 class="mainTitle" > Edit Customers</h1>
 		</div>
 		<div ncy-breadcrumb></div>
 	</div>
@@ -22,6 +22,7 @@
 						<div class="col-md-12">
 							<fieldset>
 
+								
 								<div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
 									<label class="control-label">
 										 Name <span class="symbol required"></span>
@@ -40,14 +41,14 @@
 									<span class="error text-small block" ng-if="Form.ktp.$dirty && Form.ktp.$invalid">First Name is required</span>
 									<span class="success text-small" ng-if="Form.ktp.$valid">Thank You!</span>
 								</div>
-								<div class="form-group" ng-class="{'has-error':Form.gender.$dirty && Form.gender.$invalid, 'has-success':Form.gender.$valid}">
+								<div class="form-group" ng-class="{'has-error':Form.users_id.$dirty && Form.users_id.$invalid, 'has-success':Form.users_id.$valid}">
 									<label class="control-label">
-										 Gender <span class="symbol required"></span>
+										 Users <span class="symbol required"></span>
 									</label>
-									<input gender="text" placeholder="Enter your Gender" class="form-control" name="gender" ng-model="myModel.gender"
+									<input gender="text" placeholder="Enter your Users" class="form-control" name="users_id" ng-model="myModel.users_id"
 									 required />
-									<span class="error text-small block" ng-if="Form.gender.$dirty && Form.gender.$invalid">First Gender is required</span>
-									<span class="success text-small" ng-if="Form.gender.$valid">Thank You!</span>
+									<span class="error text-small block" ng-if="Form.users_id.$dirty && Form.users_id.$invalid">First Users is required</span>
+									<span class="success text-small" ng-if="Form.users_id.$valid">Thank You!</span>
 								</div>
 
 								<!--<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
@@ -93,7 +94,7 @@
 								<button type="reset" class="btn btn-primary btn-o" ng-disabled="process" ng-click="form.reset(Form)">
 									Reset
 								</button>
-								<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.employees-list"
+								<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.customers-list"
 										ng-disabled="process">Kembali
 								</button>
 							</div>

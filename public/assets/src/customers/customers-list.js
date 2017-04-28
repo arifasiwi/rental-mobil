@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('EmployeesCtrl', ['$scope', 'employees', 'SweetAlert', '$http','$timeout', function ($scope, employees,SweetAlert) {
+app.controller('CustomersCtrl', ['$scope', 'customers', 'SweetAlert', '$http','$timeout', function ($scope, customers,SweetAlert) {
 //urussan tampilan
     $scope.main = {
         page: 1,
@@ -34,19 +34,19 @@ app.controller('EmployeesCtrl', ['$scope', 'employees', 'SweetAlert', '$http','$
     };
     // go to print preview page
     $scope.print = function () {
-        window.open ('../api/v1/cetak-employees','_blank');
+        window.open ('../api/v1/cetak-customers','_blank');
     };
     //Init dataAkun
-    $scope.dataEmployees = '';
+    $scope.dataCustomers = '';
     // init get data
-    employees.get($scope.main.page, $scope.main.term)
+    customers.get($scope.main.page, $scope.main.term)
         .success(function (data) {
 
             //Change Loading status
             $scope.setLoader(false);
 
             // result data
-            $scope.dataEmployees = data.data;
+            $scope.dataCustomers = data.data;
             // set the current page
             $scope.current_page = data.current_page;
 
@@ -77,14 +77,14 @@ app.controller('EmployeesCtrl', ['$scope', 'employees', 'SweetAlert', '$http','$
         //Start loading
         $scope.setLoader(true);
 
-        employees.get($scope.main.page, $scope.main.term)
+        customers.get($scope.main.page, $scope.main.term)
             .success(function (data) {
 
                 //Stop loading
                 $scope.setLoader(false);
 
                 // result data
-                $scope.dataEmployees = data.data;
+                $scope.dataCustomers = data.data;
 
                 // set the current page
                 $scope.current_page = data.current_page;
@@ -161,7 +161,7 @@ app.controller('EmployeesCtrl', ['$scope', 'employees', 'SweetAlert', '$http','$
 //             .targetEvent(id);
 //         //
 //         $mdDialog.show(confirm).then(function () {
-//             employees.destroy(id)
+//             customers.destroy(id)
 //                 .success(function (data) {
 //                     if (data.success == true) {
 //                         $scope.showToast('green', 'Data Berhasil Dihapus');
@@ -188,7 +188,7 @@ app.controller('EmployeesCtrl', ['$scope', 'employees', 'SweetAlert', '$http','$
             closeOnCancel: false
         }, function (isConfirm) {
             if (isConfirm) {
-                employees.destroy(id)
+                customers.destroy(id)
                     .success(function (data) {
                         if (data.success == true) {
                             SweetAlert.swal({

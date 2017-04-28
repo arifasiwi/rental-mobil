@@ -14,19 +14,19 @@ class Transactions extends Model
      * @var array
      */
     protected $fillable = [
-        'employees_id', 'cars_id', 'users_id', 'drivers_id', 'destinations', 'date_transactions', 'date_loans', 'date_returns', 'tot_payments', 
+        'customers_id', 'cars_id', 'users_id', 'drivers_id', 'destinations', 'date_transactions', 'date_loans', 'date_returns', 'tot_payments', 
     ];
 
-    protected $with = ['users', 'employees', 'cars', 'drivers'];
+    protected $with = ['users', 'customers', 'cars', 'drivers'];
 
     public function users()
     {
         return $this->belongsTo('App\Domain\Entities\Users', 'users_id');
     }
 
-    public function employees()
+    public function customers()
     {
-        return $this->belongsTo('App\Domain\Entities\Employees', 'employees_id');
+        return $this->belongsTo('App\Domain\Entities\Customers', 'customers_id');
     }
 
     public function cars()

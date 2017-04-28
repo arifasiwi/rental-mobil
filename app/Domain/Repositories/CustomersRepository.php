@@ -2,30 +2,30 @@
 
 namespace App\Domain\Repositories;
 
-use App\Domain\Entities\Employees;
-use App\Domain\Contracts\EmployeesInterface;
+use App\Domain\Entities\Customers;
+use App\Domain\Contracts\CustomersInterface;
 use App\Domain\Contracts\Crudable;
 
 
 /**
- * Class EmployeesRepository
+ * Class CustomersRepository
  * @package App\Domain\Repositories
  */
-class EmployeesRepository extends AbstractRepository implements EmployeesInterface, Crudable
+class CustomersRepository extends AbstractRepository implements CustomersInterface, Crudable
 {
 
     /**
-     * @var Employees
+     * @var Customers
      */
     protected $model;
 
     /**
-     * EmployeesRepository constructor.
-     * @param Employees $employees
+     * CustomersRepository constructor.
+     * @param Customers $customers
      */
-    public function __construct(Employees $employees)
+    public function __construct(Customers $customers)
     {
-        $this->model = $employees;
+        $this->model = $customers;
     }
 
     /**
@@ -59,7 +59,7 @@ class EmployeesRepository extends AbstractRepository implements EmployeesInterfa
         // execute sql insert
         return parent::create([
             'name'    => e($data['name']),
-            'gender'   => e($data['gender']),
+            'users_id'   => e($data['users_id']),
             'ktp' => e($data['ktp']),
             'address'   => e($data['address']),
             'phone'   => e($data['phone'])
@@ -76,7 +76,7 @@ class EmployeesRepository extends AbstractRepository implements EmployeesInterfa
     {
         return parent::update($id, [
             'name'    => e($data['name']),
-            'gender'   => e($data['gender']),
+            'users_id'   => e($data['users_id']),
             'ktp' => e($data['ktp']),
             'address'   => e($data['address']),
             'phone'   => e($data['phone'])

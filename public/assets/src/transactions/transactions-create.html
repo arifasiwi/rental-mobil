@@ -3,7 +3,7 @@
 	<section id="page-title">
 		<div class="row">
 			<div class="col-sm-8">
-				<h1 class="mainTitle"> CREATE Transactios</h1>
+				<h1 class="mainTitle"> Create Transactios</h1>
 			</div>
 			<div ncy-breadcrumb></div>
 		</div>
@@ -22,22 +22,77 @@
 							<div class="col-md-12">
 								<fieldset>
 
-									<div class="form-group" ng-class="{'has-error':Form.employees.$dirty && Form.employees.$invalid, 'has-success':Form.employees.$valid}">
-                    <label class="control-label">
-                    Employees <span class="symbol required"></span>
+									<div class="form-group" ng-class="{'has-error':Form.customers.$dirty && Form.customers.$invalid, 'has-success':Form.customers.$valid}">
+										<label class="control-label">
+                    Customers <span class="symbol required"></span>
                   </label>
-                              <p class="input-group">
-                      <input type="text" placeholder="Enter your Employees" class="form-control" name="employees" ng-model="myModel.employees" required readonly/>
-                      <span class="input-group-btn">
-                      <button class="btn btn-default" ng-click="openemployees('lg')" md-ink-ripple
+										<p class="input-group">
+											<input type="text" placeholder="Enter your Customers" class="form-control" name="customers" ng-model="myModel.customers"
+											 required readonly/>
+											<span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="opencustomers('lg')" md-ink-ripple
                         tooltip="Pilih Members"><i
                         class="glyphicon glyphicon-list"></i></button>
 
-                    <span class="error text-small block" ng-if="Form.employees.$dirty && Form.employees.$invalid">First Employees is required</span>
+                    <span class="error text-small block" ng-if="Form.customers.$dirty && Form.customers.$invalid">First Customers is required</span>
 
-                      <span class="success text-small" ng-if="Form.employees.$valid">Thank You!</span>
-                      </span>
-                  </div>
+											<span class="success text-small" ng-if="Form.customers.$valid">Thank You!</span>
+											</span>
+									</div>
+
+									<div class="form-group" ng-class="{'has-error':Form.cars.$dirty && Form.cars.$invalid, 'has-success':Form.cars.$valid}">
+										<label class="control-label">
+                    Cars <span class="symbol required"></span>
+                  </label>
+										<p class="input-group">
+											<input type="text" placeholder="Enter your Cars" class="form-control" name="cars" ng-model="myModel.cars"
+											 required readonly/>
+											<span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="opencars('lg')" md-ink-ripple
+                        tooltip="Pilih Members"><i
+                        class="glyphicon glyphicon-list"></i></button>
+
+                    <span class="error text-small block" ng-if="Form.cars.$dirty && Form.cars.$invalid">First Cars is required</span>
+
+											<span class="success text-small" ng-if="Form.cars.$valid">Thank You!</span>
+											</span>
+									</div>
+
+									<div class="form-group" ng-class="{'has-error':Form.users.$dirty && Form.users.$invalid, 'has-success':Form.users.$valid}">
+										<label class="control-label">
+                    Users <span class="symbol required"></span>
+                  </label>
+										<p class="input-group">
+											<input type="text" placeholder="Enter your Users" class="form-control" name="users" ng-model="myModel.users"
+											 required readonly/>
+											<span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="openusers('lg')" md-ink-ripple
+                        tooltip="Pilih Members"><i
+                        class="glyphicon glyphicon-list"></i></button>
+
+                    <span class="error text-small block" ng-if="Form.users.$dirty && Form.users.$invalid">First Users is required</span>
+
+											<span class="success text-small" ng-if="Form.users.$valid">Thank You!</span>
+											</span>
+									</div>
+
+								<div class="form-group" ng-class="{'has-error':Form.drivers.$dirty && Form.drivers.$invalid, 'has-success':Form.drivers.$valid}">
+										<label class="control-label">
+                    Drivers <span class="symbol required"></span>
+                  </label>
+										<p class="input-group">
+											<input type="text" placeholder="Enter your Drivers" class="form-control" name="drivers" ng-model="myModel.drivers"
+											 required readonly/>
+											<span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="opendrivers('lg')" md-ink-ripple
+                        tooltip="Pilih Members"><i
+                        class="glyphicon glyphicon-list"></i></button>
+
+                    <span class="error text-small block" ng-if="Form.drivers.$dirty && Form.drivers.$invalid">First Drivers is required</span>
+
+											<span class="success text-small" ng-if="Form.drivers.$valid">Thank You!</span>
+											</span>
+									</div>
 
 									<div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
 										<label class="control-label">

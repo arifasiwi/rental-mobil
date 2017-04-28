@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTransaksi extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,18 +12,14 @@ class CreateTableTransaksi extends Migration
      * @return void
      */
     public function up()
-    {
-       Schema::create('transactions', function (Blueprint $table) {
+   {
+        Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('customers_id');
-            $table->string('cars_id');
+            $table->string('name');
+            $table->string('address');
+            $table->string('ktp');
+            $table->string('phone');
             $table->string('users_id');
-            $table->string('drivers_id');
-            $table->string('destinations');
-            $table->date('date_transactions');
-            $table->date('date_loans');
-            $table->date('date_returns');
-            $table->string('tot_payments');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -36,5 +32,6 @@ class CreateTableTransaksi extends Migration
      */
     public function down()
     {
-        Schema::drop('transactions');
-    }}
+        Schema::drop('customers');
+    }
+}

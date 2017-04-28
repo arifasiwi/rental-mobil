@@ -15,12 +15,12 @@ class employees_table_seeder extends Seeder
         DB::table('employees')->truncate();
 
         $employees = [
-['id' => 1,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],     
-['id' => 2,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],            
-['id' => 3,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
-['id' => 4,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
-['id' => 5,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
-['id' => 6,    'name' => 'paijem',     'gender' => 'ajgjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()], 
+['id' => 1,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],     
+['id' => 2,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],            
+['id' => 3,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
+['id' => 4,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
+['id' => 5,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()],           
+['id' => 6,    'name' => 'paijem',     'gender' => 'gfkjh',     'ktp' => '123456789',     'phone' => '081638358973',        'address' => 'malang',   'created_at' => \Carbon\Carbon::now()], 
      ];
 
         // insert batch

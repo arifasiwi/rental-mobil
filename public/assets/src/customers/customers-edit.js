@@ -1,7 +1,8 @@
-app.controller('EmployeesCreateCtrl', ['$state', '$scope', 'employees','$timeout', 'SweetAlert','toaster','$http', function ($state, $scope, employees,$timeout, SweetAlert,toaster) {
+app.controller('CustomersEditCtrl', ['$state', '$scope', 'customers','$timeout', 'SweetAlert','toaster', '$stateParams', '$http', function ($state, $scope, customers,$timeout, SweetAlert,toaster,$stateParams) {
     //Init input addForm variable
-    //create employees
+    //create customers
     $scope.process = false;
+    $scope.id=$scope.$stateParams.id
 
     $scope.master = $scope.myModel;
     $scope.form = {
@@ -48,7 +49,12 @@ app.controller('EmployeesCreateCtrl', ['$state', '$scope', 'employees','$timeout
         $scope.myModel.merk= null;
         $scope.myModel.color= null;
     };
-    $scope.submitData = function (isBack) {
+//Run Ajax
+    customers.show($scope.id)
+        .success(function (data) {
+            $scope.myModel= data;
+        });
+    $scope.updateData = function (isBack) {
         $scope.alerts = [];
         //Set process status
         $scope.process = true;
@@ -57,20 +63,19 @@ app.controller('EmployeesCreateCtrl', ['$state', '$scope', 'employees','$timeout
         //Check validation status
         if ($scope.Form.$valid) {
             //run Ajax
-            employees.store($scope.myModel)
+            customers.update($scope.myModel)
                 .success(function (data) {
-                    if (data.created == true) {
+                    if (data.updated == true) {
                         //If back to list after submitting
                         if (isBack == true) {
-                            $state.go('app.employees-list');
+                            $state.go('app.customers-list');
                             $scope.toaster = {
                                 type: 'success',
                                 title: 'Sukses',
-                                text: 'Simpan Data Berhasil!'
+                                text: 'Update Data Berhasil!'
                             };
                                 toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
                         } else {
-                            $scope.clearInput();
                             $scope.sup();
                             $scope.alerts.push({
                                 type: 'success',
@@ -85,8 +90,27 @@ app.controller('EmployeesCreateCtrl', ['$state', '$scope', 'employees','$timeout
                             toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
                         }
                         //Clear Input
+                    } else {
+                        $scope.process = false;
+                        //$scope.alertset.class = 'orange';
+                        $scope.toaster = {
+                            type: 'success',
+                            title: 'Sukses',
+                            text: 'Simpan Data Berhasil!'
+                        };
+                        toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
+                        $scope.clearInput();
+
+                        //Set Alert message
+                        $scope.sup();
+                        $scope.alerts.push({
+                            type: 'success',
+                            msg: 'Simpan Data Berhasil!'
+                        });
+
                     }
-                        })
+
+                })
                 .error(function (data, status) {
                     // unauthorized
                     if (status === 401) {
@@ -109,5 +133,6 @@ app.controller('EmployeesCreateCtrl', ['$state', '$scope', 'employees','$timeout
                 });
         }
     };
+    
 
 }]);

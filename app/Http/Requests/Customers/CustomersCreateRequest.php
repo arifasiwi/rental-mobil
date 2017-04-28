@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Drivers;
+namespace App\Http\Requests\Customers;
 
 use App\Http\Requests\Request;
 
@@ -9,7 +9,7 @@ use App\Http\Requests\Request;
  *
  * @package App\Http\Requests\User
  */
-class DriversCreateRequest extends Request
+class CustomersCreateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,7 +28,7 @@ class DriversCreateRequest extends Request
      */
     protected $attrs = [
         'name'    => 'Name',
-        'gender'   => 'Gender',
+        'users_id'   => 'Users_id',
         'ktp' => 'Ktp',
         'phone'    => 'Phone',
         'address'   => 'Address'
@@ -44,7 +44,7 @@ class DriversCreateRequest extends Request
     {
         return [
             'name'    => 'required|max:225',
-            'gender'   => 'required|max:225',
+            'users_id'   => 'required|max:225',
             'ktp' => 'required|max:60',
             'phone'    => 'required|max:225',
             'address' => 'required|max:60'

@@ -11,13 +11,39 @@ app.factory('transactions', ['$http', function ($http) {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
             });
         },
-  getemployees: function (page, term) {
+  getcustomers: function (page, term) {
             return $http({
                 method: 'get',
-                url: '/api/employees?page=' + page + '&term=' + term,
+                url: '/api/customers?page=' + page + '&term=' + term,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
             });
         },
+
+ getcars: function (page, term) {
+            return $http({
+                method: 'get',
+                url: '/api/cars?page=' + page + '&term=' + term,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
+            });
+        },
+
+getusers: function (page, term) {
+            return $http({
+                method: 'get',
+                url: '/api/users?page=' + page + '&term=' + term,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
+            });
+        },
+
+getdrivers: function (page, term) {
+            return $http({
+                method: 'get',
+                url: '/api/drivers?page=' + page + '&term=' + term,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
+            });
+        },
+
+
         getLasttransactions: function () {
             return $http({
                 method: 'get',

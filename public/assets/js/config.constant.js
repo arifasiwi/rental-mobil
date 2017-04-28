@@ -65,10 +65,10 @@ app.constant('JS_REQUIRES', {
         'drivers-edit'    : 'assets/src/drivers/drivers-edit.js',
         'drivers-service': 'assets/src/drivers/drivers-service.js',
 
-        'employees-list'    : 'assets/src/employees/employees-list.js',
-        'employees-create'    : 'assets/src/employees/employees-create.js',
-        'employees-edit'    : 'assets/src/employees/employees-edit.js',
-        'employees-service': 'assets/src/employees/employees-service.js',
+        'customers-list'    : 'assets/src/customers/customers-list.js',
+        'customers-create'    : 'assets/src/customers/customers-create.js',
+        'customers-edit'    : 'assets/src/customers/customers-edit.js',
+        'customers-service': 'assets/src/customers/customers-service.js',
 
         'users-list'    : 'assets/src/users/users-list.js',
         'users-create'    : 'assets/src/users/users-create.js',
