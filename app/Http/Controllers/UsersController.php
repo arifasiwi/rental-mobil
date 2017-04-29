@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Domain\Repositories\UsersRepository;
+=======
+>>>>>>> 38324a132ef4b8788d2f6142d50b85349c8253da
 use App\Http\Requests\Users\UsersCreateRequest;
 use App\Http\Requests\Users\UsersEditRequest;
 use Illuminate\Http\Request;
@@ -20,7 +23,11 @@ class UsersController extends Controller
      * UserssController constructor.
      * @param UsersInterface $userss
      */
+<<<<<<< HEAD
     public function __construct(UsersRepository $users)
+=======
+    public function __construct(UsersInterface $users)
+>>>>>>> 38324a132ef4b8788d2f6142d50b85349c8253da
     {
         $this->users = $users;
     }
@@ -105,6 +112,7 @@ class UsersController extends Controller
     {
         return $this->users->delete($id);
     }
+<<<<<<< HEAD
     public function getSession()
     {
         if (session('email') == null) {
@@ -127,5 +135,7 @@ class UsersController extends Controller
                     ]]);
             }
     
+=======
+>>>>>>> 38324a132ef4b8788d2f6142d50b85349c8253da
 
 }

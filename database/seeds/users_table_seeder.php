@@ -13,6 +13,8 @@ class users_table_seeder extends Seeder
 
     {
 
+
+
 // truncate record
 
         DB::table('users')->truncate();
@@ -26,12 +28,9 @@ class users_table_seeder extends Seeder
             ['id' => 4, 'name' => 'paijem', 'email' => 'arifasiw:gmail.com', 'ktp' => '123456789', 'phone' => '081638358973', 'address' => 'malang', 'level' => '0', 'password' => 'aappaa', 'created_at' => \Carbon\Carbon::now()],
             ['id' => 5, 'name' => 'paijem', 'email' => 'arisiwi@gmail.com', 'ktp' => '123456789', 'phone' => '081638358973', 'address' => 'malang', 'level' => '0', 'password' => 'aappaa', 'created_at' => \Carbon\Carbon::now()],
             ['id' => 6, 'name' => 'paijem', 'email' => 'asiwi@gmail.com', 'ktp' => '123456789', 'phone' => '081638358973', 'address' => 'malang', 'level' => '0', 'password' => 'aappaa', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 7, 'name' => 'Administrator', 'email' => 'administrator@rental.com', 'ktp' => '123456789', 'phone' => '081638358973', 'address' => 'malang', 'level' => '0', 'password' => bcrypt('qwerty'), 'created_at' => \Carbon\Carbon::now()],
 
         ];
 
-
-// insert batch
 
         DB::table('users')->insert($users);
 

@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
                 return redirect()->route('backoffice');
             }
         }
-        return $next($request);
 
+        return $next($request);
     }
 }
