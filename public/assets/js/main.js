@@ -12,8 +12,6 @@ var app = angular.module('clipApp', ['clip-two'])
 	}]);
 
 app.run(['$rootScope', '$state', '$stateParams','mainapp',
-
-
 function ($rootScope, $state, $stateParams,mainapp) {
 
     // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
