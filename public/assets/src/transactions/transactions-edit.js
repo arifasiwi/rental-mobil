@@ -49,6 +49,7 @@ app.controller('TransactionsEditCtrl', ['$state', '$scope', 'transactions','$tim
         $scope.myModel.merk= null;
         $scope.myModel.color= null;
     };
+    
 //Run Ajax
     transactions.show($scope.id)
         .success(function (data) {

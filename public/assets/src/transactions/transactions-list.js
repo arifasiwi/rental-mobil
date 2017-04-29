@@ -111,6 +111,34 @@ app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$ht
             });
     };
 
+// mengeluarkan modal
+     $scope.dtdetail = ''
+    $scope.opendrivers = function (size) {
+
+        var modalInstance = $uibModal.open({
+            templateUrl: 'assets/src/transactions/detail.dialog.html',
+            controller: 'ModalMembers',
+            size: size,
+            resolve: {
+                items: function () {
+                    return $scope.items;
+                }
+            }
+        });
+
+        modalInstance.result.then(function (data) {
+            // $scope.selected = selectedItem;
+            $scope.myModel ={}
+            $scope.dtdetail.id = data.id
+            $scope.myModel.detail= data.name
+
+            console.log(data.name);
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+
+
     // Navigasi halaman terakhir
     $scope.lastPage = function () {
         //Disable All Controller
@@ -223,4 +251,58 @@ app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$ht
     };
 
 
+}]);
+
+// show detail
+app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+    $scope.main = {
+        page: 1,
+        term: ''
+    };
+
+    $scope.isLoading = true;
+    $scope.isLoaded = false;
+
+    $scope.setLoader = function (status) {
+        if (status == true) {
+            $scope.isLoading = true;
+            $scope.isLoaded = false;
+        } else {
+            $scope.isLoading = false;
+            $scope.isLoaded = true;
+        }
+    };
+    //Set process status to false
+    $scope.process = false;
+
+    //Init Alert status
+    $scope.alertset = {
+        show: 'hide',
+        class: 'green',
+
+        msg: ''
+    };
+
+    $scope.setLoader(true);
+
+    //Init input form variable
+    $scope.input = '';
+
+    //Init Alert status
+    $scope.alertset = {
+        show: 'hide',
+        class: 'green',
+        msg: ''
+    };
+
+    //Run Ajax
+    transactions.show($scope.id)
+        .success(function (data) {
+            $scope.myModel= data;
+        });
+
+    //Close Dialog
+    $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    }
 }]);
