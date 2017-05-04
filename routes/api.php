@@ -13,12 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::get('/user', function (Request $request) {
-//    return $request->user();
-//})->middleware('auth:api');
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
 
 Route::resource('cars','CarsController');
 Route::resource('transactions','TransactionsController');
@@ -38,4 +32,3 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('post-login', 'LoginController@getLogin');
     Route::post('post-login', 'LoginController@postLogin');
 });
-Route::resource('customers','CustomersController');

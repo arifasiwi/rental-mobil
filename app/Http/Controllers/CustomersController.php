@@ -33,7 +33,7 @@ class CustomersController extends Controller
      */
     public function index(Request $request)
     {
-        return $this->customers->paginate(10, $request->input('page'), $column = ['*'], '', $request->input('search'));
+        return $this->customers->paginate(10, $request->input('page'), $column = ['*'], '', $request->input('term'));
     }
 
     /**

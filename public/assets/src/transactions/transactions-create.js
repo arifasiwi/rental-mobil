@@ -2,16 +2,15 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
     //Init input addForm variable
     //create transactions
     $scope.process = false;
-
+$scope.myModel ={};
     $scope.master = $scope.myModel;
-
     // customers dialog
     $scope.dtcustomers = ''
     $scope.opencustomers = function (size) {
 
         var modalInstance = $uibModal.open({
             templateUrl: 'assets/src/transactions/customers.dialog.html',
-            controller: 'ModalMembers',
+            controller: 'ModalCustomers',
             size: size,
             resolve: {
                 items: function () {
@@ -22,11 +21,9 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         modalInstance.result.then(function (data) {
             // $scope.selected = selectedItem;
-            $scope.myModel ={}
             $scope.dtcustomers.id = data.id
             $scope.myModel.customers= data.name
 
-            console.log(data.name);
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -38,7 +35,7 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         var modalInstance = $uibModal.open({
             templateUrl: 'assets/src/transactions/cars.dialog.html',
-            controller: 'ModalMembers',
+            controller: 'ModalCars',
             size: size,
             resolve: {
                 items: function () {
@@ -49,11 +46,9 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         modalInstance.result.then(function (data) {
             // $scope.selected = selectedItem;
-            $scope.myModel ={}
             $scope.dtcars.id = data.id
-            $scope.myModel.cars= data.name
+            $scope.myModel.cars= data.merk
 
-            console.log(data.name);
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -65,7 +60,7 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         var modalInstance = $uibModal.open({
             templateUrl: 'assets/src/transactions/drivers.dialog.html',
-            controller: 'ModalMembers',
+            controller: 'ModalDrivers',
             size: size,
             resolve: {
                 items: function () {
@@ -76,11 +71,9 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         modalInstance.result.then(function (data) {
             // $scope.selected = selectedItem;
-            $scope.myModel ={}
             $scope.dtdrivers.id = data.id
             $scope.myModel.drivers= data.name
 
-            console.log(data.name);
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -92,7 +85,7 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         var modalInstance = $uibModal.open({
             templateUrl: 'assets/src/transactions/users.dialog.html',
-            controller: 'ModalMembers',
+            controller: 'ModalUsers',
             size: size,
             resolve: {
                 items: function () {
@@ -103,15 +96,15 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
         modalInstance.result.then(function (data) {
             // $scope.selected = selectedItem;
-            $scope.myModel ={}
+            
             $scope.dtusers.id = data.id
             $scope.myModel.users= data.name
 
-            console.log(data.name);
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
     };
+
 
     $scope.form = {
 
@@ -223,7 +216,7 @@ app.controller('TransactionsCreateCtrl', ['$state', '$scope', 'transactions','$u
 
 }]);
 
-app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+app.controller('ModalDrivers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
     $scope.main = {
         page: 1,
         term: ''
@@ -393,7 +386,7 @@ app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalIn
     }
 }]);
 
-app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+app.controller('ModalCars', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
     $scope.main = {
         page: 1,
         term: ''
@@ -563,7 +556,7 @@ app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalIn
     }
 }]);
 
-app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+app.controller('ModalCustomers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
     $scope.main = {
         page: 1,
         term: ''
@@ -733,7 +726,7 @@ app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalIn
     }
 }]);
 
-app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+app.controller('ModalUsers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
     $scope.main = {
         page: 1,
         term: ''

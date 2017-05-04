@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Employees;
+namespace App\Http\Requests\Drivers;
 
 use App\Http\Requests\Request;
 
@@ -9,7 +9,7 @@ use App\Http\Requests\Request;
  *
  * @package App\Http\Requests\User
  */
-class EmployeesCreateRequest extends Request
+class DriversCreateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.

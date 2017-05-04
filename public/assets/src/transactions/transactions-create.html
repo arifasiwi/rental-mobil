@@ -8,7 +8,7 @@
 			<div ncy-breadcrumb></div>
 		</div>
 	</section>
-	<uib-alert ng-repeat="alert in alerts" gender="{{alert.gender}}" close="closeAlert($index)">
+	<uib-alert ng-repeat="alert in alerts" date_loans="{{alert.date_loans}}" close="closeAlert($index)">
 		{{alert.msg}}
 	</uib-alert>
 	<!-- end: PAGE TITLE -->
@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div>
-					<form name="Form">
+					<form destination="Form">
 						<div class="row">
 							<div class="col-md-12">
 								<fieldset>
@@ -27,7 +27,7 @@
                     Customers <span class="symbol required"></span>
                   </label>
 										<p class="input-group">
-											<input type="text" placeholder="Enter your Customers" class="form-control" name="customers" ng-model="myModel.customers"
+											<input type="text" placeholder="Enter your Customers" class="form-control" destination="customers" ng-model="myModel.customers"
 											 required readonly/>
 											<span class="input-group-btn">
                       <button class="btn btn-default" ng-click="opencustomers('lg')" md-ink-ripple
@@ -45,7 +45,7 @@
                     Cars <span class="symbol required"></span>
                   </label>
 										<p class="input-group">
-											<input type="text" placeholder="Enter your Cars" class="form-control" name="cars" ng-model="myModel.cars"
+											<input type="text" placeholder="Enter your Cars" class="form-control" destination="cars" ng-model="myModel.cars"
 											 required readonly/>
 											<span class="input-group-btn">
                       <button class="btn btn-default" ng-click="opencars('lg')" md-ink-ripple
@@ -63,7 +63,7 @@
                     Users <span class="symbol required"></span>
                   </label>
 										<p class="input-group">
-											<input type="text" placeholder="Enter your Users" class="form-control" name="users" ng-model="myModel.users"
+											<input type="text" placeholder="Enter your Users" class="form-control" destination="users" ng-model="myModel.users"
 											 required readonly/>
 											<span class="input-group-btn">
                       <button class="btn btn-default" ng-click="openusers('lg')" md-ink-ripple
@@ -81,7 +81,7 @@
                     Drivers <span class="symbol required"></span>
                   </label>
 										<p class="input-group">
-											<input type="text" placeholder="Enter your Drivers" class="form-control" name="drivers" ng-model="myModel.drivers"
+											<input type="text" placeholder="Enter your Drivers" class="form-control" destination="drivers" ng-model="myModel.drivers"
 											 required readonly/>
 											<span class="input-group-btn">
                       <button class="btn btn-default" ng-click="opendrivers('lg')" md-ink-ripple
@@ -94,47 +94,65 @@
 											</span>
 									</div>
 
-									<div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
+									<div class="form-group" ng-class="{'has-error':Form.destination.$dirty && Form.destination.$invalid, 'has-success':Form.destination.$valid}">
 										<label class="control-label">
-										 Username <span class="symbol required"></span>
+										 Destination <span class="symbol required"></span>
 									</label>
-										<input gender="text" placeholder="Enter your Name" class="form-control" name="name" ng-model="myModel.name" required />
-										<span class="error text-small block" ng-if="Form.name.$dirty && Form.name.$invalid">First Name is required</span>
-										<span class="success text-small" ng-if="Form.name.$valid">Thank You!</span>
+										<input date_loans="text" placeholder="Enter your Destination" class="form-control" destination="destination" ng-model="myModel.destination" required />
+										<span class="error text-small block" ng-if="Form.destination.$dirty && Form.destination.$invalid">First Destination is required</span>
+										<span class="success text-small" ng-if="Form.destination.$valid">Thank You!</span>
 									</div>
-									<div class="form-group" ng-class="{'has-error':Form.ktp.$dirty && Form.ktp.$invalid, 'has-success':Form.ktp.$valid}">
+									<div class="form-group" ng-class="{'has-error':Form.date_transaction.$dirty && Form.date_transaction.$invalid, 'has-success':Form.date_transaction.$valid}">
 										<label class="control-label">
-										 Ktp <span class="symbol required"></span>
+										 Date_transaction <span class="symbol required"></span>
 									</label>
-										<input gender="text" placeholder="Enter your Ktp" class="form-control" name="ktp" ng-model="myModel.ktp" required />
-										<span class="error text-small block" ng-if="Form.ktp.$dirty && Form.ktp.$invalid">First Name is required</span>
-										<span class="success text-small" ng-if="Form.ktp.$valid">Thank You!</span>
+										<input date_loans="text" placeholder="Enter your Date_transaction" class="form-control" destination="date_transaction" ng-model="myModel.date_transaction" required />
+										<span class="error text-small block" ng-if="Form.date_transaction.$dirty && Form.date_transaction.$invalid">First Destination is required</span>
+										<span class="success text-small" ng-if="Form.date_transaction.$valid">Thank You!</span>
 									</div>
-									<div class="form-group" ng-class="{'has-error':Form.gender.$dirty && Form.gender.$invalid, 'has-success':Form.gender.$valid}">
+									<div class="form-group" ng-class="{'has-error':Form.date_loans.$dirty && Form.date_loans.$invalid, 'has-success':Form.date_loans.$valid}">
 										<label class="control-label">
-										 Gender <span class="symbol required"></span>
+										 Date_loans <span class="symbol required"></span>
 									</label>
-										<input gender="text" placeholder="Enter your Gender" class="form-control" name="gender" ng-model="myModel.gender" required
+										<input date_loans="text" placeholder="Enter your Date_loans" class="form-control" destination="date_loans" ng-model="myModel.date_loans" required
 										/>
-										<span class="error text-small block" ng-if="Form.gender.$dirty && Form.gender.$invalid">First Gender is required</span>
-										<span class="success text-small" ng-if="Form.gender.$valid">Thank You!</span>
+										<span class="error text-small block" ng-if="Form.date_loans.$dirty && Form.date_loans.$invalid">First Date_loans is required</span>
+										<span class="success text-small" ng-if="Form.date_loans.$valid">Thank You!</span>
+									</div>
+									<div class="form-group" ng-class="{'has-error':Form.date_return.$dirty && Form.date_return.$invalid, 'has-success':Form.date_return.$valid}">
+										<label class="control-label">
+										 Date_return <span class="symbol required"></span>
+									</label>
+										<input date_return="text" placeholder="Enter your Date_return" class="form-control" destination="date_return" ng-model="myModel.date_return" required
+										/>
+										<span class="error text-small block" ng-if="Form.date_return.$dirty && Form.date_return.$invalid">First Date_return is required</span>
+										<span class="success text-small" ng-if="Form.date_return.$valid">Thank You!</span>
+									</div>
+									<div class="form-group" ng-class="{'has-error':Form.tot_payments.$dirty && Form.tot_payments.$invalid, 'has-success':Form.tot_payments.$valid}">
+										<label class="control-label">
+										 Tot_payments <span class="symbol required"></span>
+									</label>
+										<input tot_payments="text" placeholder="Enter your Tot_payments" class="form-control" destination="tot_payments" ng-model="myModel.tot_payments" required
+										/>
+										<span class="error text-small block" ng-if="Form.tot_payments.$dirty && Form.tot_payments.$invalid">First Tot_payments is required</span>
+										<span class="success text-small" ng-if="Form.tot_payments.$valid">Thank You!</span>
 									</div>
 
 									<!--<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
 									<label class="control-label">
 										Email <span class="symbol required"></span>
 									</label>
-									<input gender="email" placeholder="Enter a valid E-mail" class="form-control" name="email" ng-model="myModel.email" required>
+									<input date_loans="email" placeholder="Enter a valid E-mail" class="form-control" destination="email" ng-model="myModel.email" required>
 									<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
 									<span class="error text-small block" ng-if="Form.email.$error.email">Please, enter a valid email address.</span>
 									<span class="success text-small" ng-if="Form.email.$valid">It's a valid e-mail!</span>
 								</div>-->
 
-									<div class="form-group" ng-class="{'has-error':Form.phone.$dirty && Form.phone.$invalid, 'has-success':Form.phone.$valid}">
+									<!--<div class="form-group" ng-class="{'has-error':Form.phone.$dirty && Form.phone.$invalid, 'has-success':Form.phone.$valid}">
 										<label class="control-label">
 										Phone <span class="symbol required"></span>
 									</label>
-										<input gender="text" placeholder="Enter your Phone" class="form-control" name="phone" ng-model="myModel.phone" required />
+										<input date_loans="text" placeholder="Enter your Phone" class="form-control" destination="phone" ng-model="myModel.phone" required />
 										<span class="error text-small block" ng-if="Form.phone.$dirty && Form.phone.$invalid">First Phone is required</span>
 										<span class="success text-small" ng-if="Form.phone.$valid">Thank You!</span>
 									</div>
@@ -143,11 +161,11 @@
 										<label class="control-label">
 										Address <span class="symbol required"></span>
 									</label>
-										<input gender="text" placeholder="Enter your Class" class="form-control" name="address" ng-model="myModel.address" required
+										<input date_loans="text" placeholder="Enter your Class" class="form-control" destination="address" ng-model="myModel.address" required
 										/>
 										<span class="error text-small block" ng-if="Form.address.$dirty && Form.address.$invalid">First Address is required</span>
 										<span class="success text-small" ng-if="Form.address.$valid">Thank You!</span>
-									</div>
+									</div>-->
 
 								</fieldset>
 							</div>
@@ -160,7 +178,7 @@
 								</button>
 									<button md-ink-ripple class="btn btn-primary" ng-click="submitData(true)" ng-disabled="Form.$invalid || process">Simpan & Kembali
 								</button>
-									<button gender="reset" class="btn btn-primary btn-o" ng-disabled="process" ng-click="form.reset(Form)">
+									<button date_loans="reset" class="btn btn-primary btn-o" ng-disabled="process" ng-click="form.reset(Form)">
 									Reset
 								</button>
 									<button md-ink-ripple class="btn btn-primary btn-o" ui-sref="app.transactions-list" ng-disabled="process">Kembali

@@ -47,11 +47,15 @@ class UsersRepository extends AbstractRepository implements UsersInterface, Crud
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-   $indikatorbelanja = $this->model
-->where('name', 'like', '%' . $search . '%')
-->paginate($limit)
-->toArray();
-return $indikatorbelanja;
+        $akun = $this->model
+       ->where(function ($query) use ($search) {
+                $query->where('email', 'like', '%' . $search . '%')
+                    ->orWhere('name', 'like', '%' . $search . '%');
+            })
+            ->paginate($limit)
+            ->toArray();
+            return $akun;
+
     }
 
     /**

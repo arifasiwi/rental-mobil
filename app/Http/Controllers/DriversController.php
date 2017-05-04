@@ -33,7 +33,7 @@ class DriversController extends Controller
      */
     public function index(Request $request)
     {
-        return $this->drivers->paginate(10, $request->input('page'), $column = ['*'], '', $request->input('search'));
+        return $this->drivers->paginate(10, $request->input('page'), $column = ['*'], '', $request->input('term'));
     }
 
     /**

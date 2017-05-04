@@ -47,7 +47,16 @@ class TransactionsRepository extends AbstractRepository implements TransactionsI
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'users_id', $search);
+        $akun = $this->model
+       ->where(function ($query) use ($search) {
+                $query->where('customers_id', 'like', '%' . $search . '%')
+                    ->orWhere('users_id', 'like', '%' . $search . '%')
+                    ->orWhere('date_loans', 'like', '%' . $search . '%');
+            })
+            ->paginate($limit)
+            ->toArray();
+            return $akun;
+
     }
 
     /**

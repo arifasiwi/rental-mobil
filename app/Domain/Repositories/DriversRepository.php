@@ -47,7 +47,16 @@ class DriversRepository extends AbstractRepository implements DriversInterface, 
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'name', $search);
+        $akun = $this->model
+       ->where(function ($query) use ($search) {
+                $query->where('ktp', 'like', '%' . $search . '%')
+                    ->orWhere('name', 'like', '%' . $search . '%')
+                    ->orWhere('address', 'like', '%' . $search . '%');
+            })
+            ->paginate($limit)
+            ->toArray();
+            return $akun;
+
     }
 
     /**
