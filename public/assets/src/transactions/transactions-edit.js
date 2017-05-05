@@ -54,6 +54,10 @@ app.controller('TransactionsEditCtrl', ['$state', '$scope', 'transactions','$tim
     transactions.show($scope.id)
         .success(function (data) {
             $scope.myModel= data;
+             $scope.myModel.customers= data.customers.name;
+             $scope.myModel.drivers= data.drivers.name;
+             $scope.myModel.cars= data.cars.merk;
+             $scope.myModel.users= data.users.name;
         });
     $scope.updateData = function (isBack) {
         $scope.alerts = [];

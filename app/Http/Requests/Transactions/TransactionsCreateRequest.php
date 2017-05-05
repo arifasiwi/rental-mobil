@@ -27,7 +27,7 @@ class TransactionsCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'employees_id'    => 'employees_id',
+        'customers_id'    => 'customers_id',
         'cars_id'   => 'cars_id',
         'users_id' => 'users_id',
         'drivers_id'    => 'drivers_id',
@@ -46,7 +46,7 @@ class TransactionsCreateRequest extends Request
     public function rules()
     {
         return [
-            'employees_id'    => 'required|max:225',
+            'customers_id'    => 'required|max:225',
             'cars_id'   => 'required|max:225',
             'users_id' => 'required|max:60',
             'drivers_id'    => 'required|max:225',

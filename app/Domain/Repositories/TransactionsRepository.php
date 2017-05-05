@@ -67,7 +67,7 @@ class TransactionsRepository extends AbstractRepository implements TransactionsI
     {
         // execute sql insert
         return parent::create([
-            'employees_id'    => e($data['employees_id']),
+            'customers_id'    => e($data['customers_id']),
             'users_id'   => e($data['users_id']),
             'cars_id' => e($data['cars_id']),
             'drivers_id'   => e($data['drivers_id']),
@@ -88,7 +88,7 @@ class TransactionsRepository extends AbstractRepository implements TransactionsI
     public function update($id, array $data)
     {
         return parent::update($id, [
-            'employees_id'    => e($data['employees_id']),
+            'customers_id'    => e($data['customers_id']),
             'users_id'   => e($data['users_id']),
             'cars_id' => e($data['cars_id']),
             'drivers_id'   => e($data['drivers_id']),
