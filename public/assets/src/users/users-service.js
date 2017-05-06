@@ -44,6 +44,15 @@ app.factory('users', ['$http', function ($http) {
         },
 
         //Update data
+
+        updatepassword: function (inputData) {
+            return $http({
+                method: 'put',
+                url: 'api/updatePass-users/',
+                data: $.param(inputData)
+            });
+        },
+
         update: function (inputData) {
             return $http({
                 method: 'put',
@@ -51,6 +60,7 @@ app.factory('users', ['$http', function ($http) {
                 data: $.param(inputData)
             });
         },
+        
         kunci: function (_id) {
             return $http({
                 method: 'put',

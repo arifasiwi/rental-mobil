@@ -70,6 +70,7 @@ app.constant('JS_REQUIRES', {
         'customers-edit'    : 'assets/src/customers/customers-edit.js',
         'customers-service': 'assets/src/customers/customers-service.js',
 
+        'UserspasswordCtrl'    : 'assets/src/users/UsersPassword.js',
         'users-list'    : 'assets/src/users/users-list.js',
         'users-create'    : 'assets/src/users/users-create.js',
         'users-edit'    : 'assets/src/users/users-edit.js',

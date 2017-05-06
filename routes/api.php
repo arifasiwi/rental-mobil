@@ -21,7 +21,7 @@ Route::resource('drivers','DriversController');
 Route::resource('users','UsersController');
 // Authentication routes...
 Route::get('get-session', 'UsersController@getSession');
-
+Route::put('updatePass-users', 'UserController@updatePass');
 
 Route::resource('customers','CustomersController');
 
