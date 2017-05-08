@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$http','$timeout', function ($scope, transactions,SweetAlert) {
+app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert','$uibModal','$log', '$http','$timeout', function ($scope, transactions,SweetAlert, $uibModal,$log) {
 //urussan tampilan
     $scope.main = {
         page: 1,
@@ -113,15 +113,15 @@ app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$ht
 
 // mengeluarkan modal
      $scope.dtdetail = ''
-    $scope.opendrivers = function (size) {
+    $scope.opendrivers = function (id) {
 
         var modalInstance = $uibModal.open({
             templateUrl: 'assets/src/transactions/detail.dialog.html',
             controller: 'ModalMembers',
-            size: size,
+            size: 'lg',
             resolve: {
                 items: function () {
-                    return $scope.items;
+                    return id;
                 }
             }
         });
@@ -254,12 +254,12 @@ app.controller('TransactionsCtrl', ['$scope', 'transactions', 'SweetAlert', '$ht
 }]);
 
 // show detail
-app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', '$stateParams', function ($state, $scope, transactions, $uibModalInstance, $stateParams) {
+app.controller('ModalMembers', ['$state', '$scope', 'transactions', '$uibModalInstance', 'items', function ($state, $scope, transactions, $uibModalInstance, items) {
     $scope.main = {
         page: 1,
         term: ''
     };
-
+$scope.id =items;
     $scope.isLoading = true;
     $scope.isLoaded = false;
 

@@ -2,26 +2,38 @@
     <div class="panel-heading bg-white" style="background: #558b2f;">
         <span class="font-bold"><center><font color="white">DATA PERANGKAT DAERAH</font></center></span>
     </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-8 m-b-xs">
-            </div>
-            <div class="col-sm-4">
-                <div class="input-group pull-right">
-                    <input type="text" class="input-sm form-control" placeholder="Search" ng-model="main.term"
-                           ng-disabled="disUtama.txtCari" ng-enter="getData()">
-                    <span class="input-group-btn" tooltip="Cari Data">
-                    <button md-ink-ripple class="btn btn-sm btn-default" type="button" ng-click="getData()"
-                            ng-disabled="main.term ==''">Cari
-                    </button>
-                    </span>
+
+
+<div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Customer</label>
+                            <div  class="col-sm-9">
+                                <p class="form-control-static">
+                                    <span style="padding-left: 8px;"></span>{{myModel.customers.name}}
+                                </p>
+                            </div>
+                        <label class="col-sm-3 control-label">Cars</label>
+                        <div ng-if="input.prov_id != ''" class="col-sm-9">
+                            <p class="form-control-static">
+                                <span style="padding-left: 8px;"></span>{{myModel.cars.merk}}
+                            </p>
+                        </div>
+                        <label class="col-sm-3 control-label">Tujuan</label>
+                        <div ng-if="input.prov_id != ''" class="col-sm-9">
+                            <p class="form-control-static">
+                                <span style="padding-left: 8px;"></span>{{myModel.cars.merk}}
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
+
+
+
     <table class="table table-striped table-hover">
         <tr>
-            <th class="col-md-1">No.</th>
                     <th class="col-md-2">Name Customer</th>
                     <th class="col-md-2">Cars</th>
                     <th class="col-md-2">Tujuan</th>
@@ -30,7 +42,6 @@
                     <th class="col-md-2">Pengembalian</th>
                     <th class="col-md-2">Denda</th>
                     <th class="col-md-2">Total Bayar</th>
-                    <th class="col-md-2">Aksi</th>
         </tr>
     </table>
     <md-content>
@@ -40,58 +51,19 @@
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
                     <tbody>
-                    <tr ng-repeat="row in input">
-                        <td  class="col-md-1">{{$index +1}}</td>
-                    <td class="col-md-2">{{row.customers.name}}</td>
-                    <td class="col-md-2">{{row.cars.merk}}</td>
-                    <td class="col-md-2">{{row.destinations}}</td>
-                    <td class="col-md-2">{{row.date_transactions}}</td>
-                    <td class="col-md-2">{{row.date_loans}}</td>
-                    <td class="col-md-2">{{row.returs}}</td>
+                    <tr>
+                    <td class="col-md-2">{{myModel.customers.name}}</td>
+                    <td class="col-md-2">{{myModel.cars.merk}}</td>
+                    <td class="col-md-2">{{myModel.destinations}}</td>
+                    <td class="col-md-2">{{myModel.date_transactions}}</td>
+                    <td class="col-md-2">{{myModel.date_loans}}</td>
+                    <td class="col-md-2">{{myModel.returs}}</td>
                     <td class="col-md-2"></td>
-                    <td class="col-md-2">{{row.tot_payments}}</td>
-                        <td class="col-md-2">
-                            <button ng-click="pilih(row)" md-ink-ripple tooltip="Pilih Data"
-                                    class="btn btn-sm btn-info">
-                                <i class="glyphicon glyphicon-check"></i>
-                            </button>
-                        </td>
+                    <td class="col-md-2">{{myModel.tot_payments}}</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="panel-footer">
-                <div class="row">
-                    <div class="col-sm-4 text-center-xs" style="margin-top: 27px;">
-                        <small>Menampilkan {{from}}-{{to}} dari {{total}} data</small>
-                    </div>
-                    <div class="col-sm-8 text-right text-center-xs">
-                        <ul class="pagination m-t-none m-b-none">
-                            <li tooltip="Halaman Pertama">
-                                <button md-ink-ripple class="btn btn-default" type="button" ng-click='firstPage()'
-                                        ng-disabled='current_page == 1 || disUtama.btnPagging'><i
-                                        class="fa fa-angle-double-left"></i></button>
-                            </li>
-                            <li tooltip="Halaman Sebelumnya">
-                                <button md-ink-ripple class="btn btn-default" type="button"
-                                        ng-click='previousPage()'
-                                        ng-disabled='current_page <= 1 || disUtama.btnPagging'><i
-                                        class="fa fa-angle-left"></i></button>
-                            </li>
-                            <li tooltip="Halaman Selanjutnya">
-                                <button md-ink-ripple class="btn btn-default" type="button" ng-click='nextPage()'
-                                        ng-disabled='main.page >= last_page || disUtama.btnPagging'><i
-                                        class="fa fa-angle-right"></i></button>
-                            </li>
-                            <li tooltip="Halaman Terakhir">
-                                <button md-ink-ripple class="btn btn-default" type="button" ng-click='lastPage()'
-                                        ng-disabled='main.page >= last_page || disUtama.btnPagging'><i
-                                        class="fa fa-angle-double-right"></i></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!— /Base —>
             </div>
         </div>
     </md-content>
