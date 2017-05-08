@@ -85,6 +85,15 @@ app.controller('UsersPasswordCtrl', ['$state', '$scope', 'users', '$timeout', 'S
                          }
                          //Clear Input
                      }
+                    else{
+                        $scope.process = false;
+                            $scope.toaster = {
+                                type: 'error',
+                                title: 'CekData',
+                                text: data.result.message
+                            };
+                            toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text); 
+                    }
  
                  })
                  .error(function (data, status) {
