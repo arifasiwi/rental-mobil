@@ -92,7 +92,7 @@ app.controller('UsersPasswordCtrl', ['$state', '$scope', 'users', '$timeout', 'S
                                 title: 'CekData',
                                 text: data.result.message
                             };
-                            toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text); 
+                            toaster.pop($scope.toaster.type, $scope.t   oaster.title, $scope.toaster.text); 
                     }
  
                  })
