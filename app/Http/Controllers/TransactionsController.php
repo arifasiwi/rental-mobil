@@ -105,4 +105,9 @@ class TransactionsController extends Controller
         return $this->transactions->delete($id);
     }
 
+    public function cekjumlahpengunjung($id)
+    {
+        return $this->transactions->cekjumlahpengunjung($id);
+    }
+
 }

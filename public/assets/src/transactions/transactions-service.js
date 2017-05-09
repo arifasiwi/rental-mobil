@@ -11,7 +11,7 @@ app.factory('transactions', ['$http', function ($http) {
                 headers: {'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest'}
             });
         },
-  getcustomers: function (page, term) {
+        getcustomers: function (page, term) {
             return $http({
                 method: 'get',
                 url: '/api/customers?page=' + page + '&term=' + term,
@@ -19,7 +19,7 @@ app.factory('transactions', ['$http', function ($http) {
             });
         },
 
- getcars: function (page, term) {
+        getcars: function (page, term) {
             return $http({
                 method: 'get',
                 url: '/api/cars?page=' + page + '&term=' + term,
@@ -27,7 +27,7 @@ app.factory('transactions', ['$http', function ($http) {
             });
         },
 
-getusers: function (page, term) {
+        getusers: function (page, term) {
             return $http({
                 method: 'get',
                 url: '/api/users?page=' + page + '&term=' + term,
@@ -35,7 +35,7 @@ getusers: function (page, term) {
             });
         },
 
-getdrivers: function (page, term) {
+        getdrivers: function (page, term) {
             return $http({
                 method: 'get',
                 url: '/api/drivers?page=' + page + '&term=' + term,
@@ -87,6 +87,12 @@ getdrivers: function (page, term) {
             return $http({
                 method: 'put',
                 url: '/api/kunci-transactions/' + _id
+            });
+        },
+        cekpnguunjung: function (_id) {
+            return $http({
+                method: 'get',
+                url: '/api/cek-pengunjung/' + _id
             });
         },
 

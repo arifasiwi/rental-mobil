@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 
 Route::resource('cars','CarsController');
 Route::resource('transactions','TransactionsController');
+Route::get('cek-pengunjung/{id}','TransactionsController@cekjumlahpengunjung');
 Route::resource('employees','EmployeesController');
 Route::resource('drivers','DriversController');
 Route::resource('users','UsersController');

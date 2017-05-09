@@ -119,5 +119,16 @@ class TransactionsRepository extends AbstractRepository implements TransactionsI
     {
         return parent::find($id, $columns);
     }
+    public function cekjumlahpengunjung($id)
+    {
+
+        // query to aql
+        $AsalUsul = $this->model
+            ->whereMonth('created_at', $id)
+            ->count();
+
+        return $AsalUsul;
+    }
+
 
 }
