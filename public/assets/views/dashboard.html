@@ -54,10 +54,16 @@
 		<div class="col-sm-4">
 			<div class="panel panel-white no-radius text-center">
 				<div class="panel-body">
-					<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+					<span class="fa-stack fa-2x">
+						<!--button create-->
+						 <a ui-sref="app.customers-create">
+						<!--button create-->
+							 <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse">
+						
+						</i> </span>
 					<h2 class="StepTitle">Manage Users</h2>
-					<p class="text-small">
-						To add users, you need to be signed in as the super user.
+					<p class="text-small" ng-controller="VisitsCtrl">
+						{{jumlahcustomes}}
 					</p>
 					<p class="links cl-effect-1">
 						<a href>
@@ -113,13 +119,13 @@
 							<h4 class="panel-title"> Penyewa </h4>
 							<ul class="panel-heading-tabs border-light">
 								<!--<li>-->
-									<!--<div class="pull-right">-->
-										<!--<div class="btn-group" uib-dropdown is-open="status.isopen">-->
-											<!--<a uib-dropdown-toggle ng-disabled="disabled" class="padding-10">-->
-												<!--<i class="ti-more-alt "></i>-->
-											<!--</a>-->
-										<!--</div>-->
-									<!--</div>-->
+								<!--<div class="pull-right">-->
+								<!--<div class="btn-group" uib-dropdown is-open="status.isopen">-->
+								<!--<a uib-dropdown-toggle ng-disabled="disabled" class="padding-10">-->
+								<!--<i class="ti-more-alt "></i>-->
+								<!--</a>-->
+								<!--</div>-->
+								<!--</div>-->
 								<!--</li>-->
 								<li class="panel-tools">
 									<ct-paneltool tool-refresh="load1()"></ct-paneltool>
@@ -145,7 +151,8 @@
 							<h4 class="panel-title"> Acquisition </h4>
 						</div>
 						<div class="panel-body">
-							<h3 class="inline-block no-margin">26</h3> visitors on-line <uib-progressbar value="40" class="progress-xs no-radius" type="success"></uib-progressbar>
+							<h3 class="inline-block no-margin">26</h3> visitors on-line
+							<uib-progressbar value="40" class="progress-xs no-radius" type="success"></uib-progressbar>
 							<div class="row">
 								<div class="col-sm-4">
 									<h4 class="no-margin">15</h4>
@@ -293,7 +300,7 @@
 					<!-- /// controller:  'OnotherCtrl' -  localtion: assets/js/controllers/dashboardCtrl.js /// -->
 					<div ng-controller="OnotherCtrl">
 						<div class="text-center">
-							<span class="mini-pie"> <canvas class="tc-chart" tc-chartjs-doughnut chart-options="options" chart-data="data" chart-legend="chart3" width="100"></canvas> <span>{{total}}</span> </span>
+							<span class="mini-pie"> <canvas class="tc-chart" tc-chartjs-doughnut chart-options="options" chart-data="data" chart-legend="chart3" width="100"></canvas> <span>{{total}}</span>							</span>
 							<span class="inline text-large no-wrap">Acquisition</span>
 						</div>
 						<div class="margin-top-20 text-center legend-xs">
@@ -370,51 +377,56 @@
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-1-small.jpg"></td>
 											<td><span class="text-small block text-light">UI Designer</span><span>Peter Clark</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-2-small.jpg"></td>
 											<td><span class="text-small block text-light">Content Designer</span><span>Nicole Bell</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-3-small.jpg"></td>
 											<td><span class="text-small block text-light">Visual Designer</span><span>Steven Thompson</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-5-small.jpg"></td>
 											<td><span class="text-small block text-light">Senior Designer</span><span>Kenneth Ross</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-4-small.jpg"></td>
 											<td><span class="text-small block text-light">Web Editor</span><span>Ella Patterson</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -428,31 +440,34 @@
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-3-small.jpg"></td>
 											<td><span class="text-small block text-light">Visual Designer</span><span>Steven Thompson</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-5-small.jpg"></td>
 											<td><span class="text-small block text-light">Senior Designer</span><span>Kenneth Ross</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 										<tr>
 											<td class="center"><img alt="image" class="img-circle" src="assets/images/avatar-4-small.jpg"></td>
 											<td><span class="text-small block text-light">Web Editor</span><span>Ella Patterson</span></td>
 											<td class="center">
-											<div class="cl-effect-13">
-												<a href>
+												<div class="cl-effect-13">
+													<a href>
 													view more
 												</a>
-											</div></td>
+												</div>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -517,7 +532,9 @@
 									<span class="badge badge-success margin-top-10">253 Sales</span>
 								</div>
 								<div class="sparkline space10">
-									<span jq-sparkline ng-model="sales" type="line" width="80%" height="47px" line-color="#8e8e93" highlight-line-color="#c2c2c5" highlight-spot-color="#CE4641" max-spot-color="#5CB85C" min-spot-color="#D9534F" spot-radius="4" fill-color="transparent" resize="true"></span>
+									<span jq-sparkline ng-model="sales" type="line" width="80%" height="47px" line-color="#8e8e93" highlight-line-color="#c2c2c5"
+									 highlight-spot-color="#CE4641" max-spot-color="#5CB85C" min-spot-color="#D9534F" spot-radius="4" fill-color="transparent"
+									 resize="true"></span>
 								</div>
 								<span class="text-white-transparent"><i class="fa fa-clock-o"></i> 1 hour ago</span>
 							</div>
@@ -532,7 +549,9 @@
 									<span class="badge badge-danger margin-top-10">253 Sales</span>
 								</div>
 								<div class="sparkline space10">
-									<span jq-sparkline ng-model="referrals" type="line" width="80%" height="47px" line-color="#8e8e93" highlight-line-color="#c2c2c5" highlight-spot-color="#CE4641" max-spot-color="#5CB85C" min-spot-color="#D9534F" spot-radius="4" fill-color="transparent" resize="true"></span>
+									<span jq-sparkline ng-model="referrals" type="line" width="80%" height="47px" line-color="#8e8e93" highlight-line-color="#c2c2c5"
+									 highlight-spot-color="#CE4641" max-spot-color="#5CB85C" min-spot-color="#D9534F" spot-radius="4" fill-color="transparent"
+									 resize="true"></span>
 								</div>
 								<span class="text-white-transparent"><i class="fa fa-clock-o"></i> 1 hour ago</span>
 							</div>
@@ -556,8 +575,7 @@
 								<p>
 									<a class="text-info" href>
 										Steven
-									</a>
-									has completed his account.
+									</a> has completed his account.
 								</p>
 							</div>
 						</li>
@@ -590,8 +608,7 @@
 									Contacted
 									<a class="text-info" href>
 										Microsoft
-									</a>
-									for license upgrades.
+									</a> for license upgrades.
 								</p>
 							</div>
 						</li>
@@ -614,8 +631,7 @@
 									Lunch with
 									<a class="text-info" href>
 										Nicole
-									</a>
-									.
+									</a> .
 								</p>
 							</div>
 						</li>

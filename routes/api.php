@@ -25,6 +25,8 @@ Route::get('get-session', 'UsersController@getSession');
 Route::put('updatePass-users', 'UserController@updatePass');
 
 Route::resource('customers','CustomersController');
+Route::get('jumlah-customers','CustomersController@jumlahcustomers');
+
 
 Route::group(['namespace' => 'Auth'], function () {
     // Authentication routes...

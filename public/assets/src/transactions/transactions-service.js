@@ -95,6 +95,11 @@ app.factory('transactions', ['$http', function ($http) {
                 url: '/api/cek-pengunjung/' + _id
             });
         },
-
+  cekjumlahcustomers: function () {
+            return $http({
+                method: 'get',
+                url: '/api/jumlah-customers' 
+            });
+        },
     }
 }]);

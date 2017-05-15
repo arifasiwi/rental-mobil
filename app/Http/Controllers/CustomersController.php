@@ -104,5 +104,10 @@ class CustomersController extends Controller
     {
         return $this->customers->delete($id);
     }
+    public function jumlahcustomers()
+    {
+        return $this->customers->jumlahcustomers();
+    }
+
 
 }

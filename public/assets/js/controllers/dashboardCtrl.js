@@ -9,6 +9,11 @@ app.controller('SparklineCtrl', ["$scope", function ($scope) {
 }]);
 
 app.controller('VisitsCtrl', ["$scope", "transactions", function ($scope, transactions) {
+  transactions.cekjumlahcustomers()
+        .success(function (data1) {
+            $scope.jumlahcustomes = data1;
+            console.log($scope.jumlahcustomes);
+        })
 $scope.refreshdata = function () {
     transactions.cekpnguunjung(1)
         .success(function (data) {

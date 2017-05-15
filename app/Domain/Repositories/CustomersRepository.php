@@ -57,6 +57,15 @@ class CustomersRepository extends AbstractRepository implements CustomersInterfa
             return $akun;
 
     }
+    public function jumlahcustomers()
+    {
+        // query to aql
+        $akun = $this->model
+            ->count();
+
+            return $akun;
+
+    }
 
     /**
      * @param array $data
