@@ -14,6 +14,11 @@ app.controller('VisitsCtrl', ["$scope", "transactions", function ($scope, transa
             $scope.jumlahcustomes = data1;
             console.log($scope.jumlahcustomes);
         })
+  transactions.cekjumlahtransactions()
+        .success(function (data1) {
+            $scope.jumlahtransactions = data1;
+            console.log($scope.jumlahtransactions);
+        })
 $scope.refreshdata = function () {
     transactions.cekpnguunjung(1)
         .success(function (data) {

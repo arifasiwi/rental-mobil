@@ -101,5 +101,13 @@ app.factory('transactions', ['$http', function ($http) {
                 url: '/api/jumlah-customers' 
             });
         },
+    
+  cekjumlahtransactions: function () {
+            return $http({
+                method: 'get',
+                url: '/api/jumlah-order' 
+            });
+        },
     }
+
 }]);

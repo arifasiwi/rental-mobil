@@ -110,4 +110,9 @@ class TransactionsController extends Controller
         return $this->transactions->cekjumlahpengunjung($id);
     }
 
+     public function jumlahtransactions()
+    {
+        return $this->transactions->jumlahtransactions();
+    }
+
 }

@@ -59,6 +59,16 @@ class TransactionsRepository extends AbstractRepository implements TransactionsI
 
     }
 
+    public function jumlahtransactions()
+    {
+        // query to aql
+        $akun = $this->model
+            ->count();
+
+            return $akun;
+
+    }
+
     /**
      * @param array $data
      * @return \Symfony\Component\HttpFoundation\Response
