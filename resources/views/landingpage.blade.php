@@ -56,139 +56,15 @@
                             <div class="tb-cell">
                                 <ul class="menu-list text-uppercase">
                                     <li class="current-menu-parent">
-                                        <a href="index.html" title="">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="current-menu-item"><a href="index.html" title="">Home menu 1</a></li>
-                                            <li><a href="../front/pages/index2.html" title="">Home menu 2</a></li>
-                                            <li><a href="../front/pages/index3.html" title="">Home menu 3</a></li>
-                                            <li><a href="../front/pages/index4.html" title="">Home menu 4</a></li>
-                                            <li><a href="../front/pages/index5.html" title="">Home background slide</a></li>
-                                            <li><a href="../front/pages/index6.html" title="">Home background video</a></li>
-                                        </ul>
+                                        <a href="/" title="">Home</a>
                                     </li>
                                     <li>
-                                        <a href="#">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="#" title="">Blog</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="../front/pages/blog.html" title="">Blog</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-detail.html">Blog Detail</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="../front/pages/about.html" title="">About</a></li>
-                                            <li>
-                                                <a href="#" title="">User</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="../front/pages/user-booking.html" title="">User Booking</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="../front/pages/user-profile.html" title="">User Profile</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="../front/pages/user-setting.html" title="">User Setting</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="../front/pages/user-review.html" title="">User Review</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="../front/pages/user-signup.html" title="">User Signup</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="../front/pages/contact.html" title="">Contact</a></li>
-                                            <li><a href="../front/pages/payment.html" title="">Payment</a></li>
-                                            <li><a href="../front/pages/element.html" title="">Element</a></li>
-                                            <li><a href="../front/pages/404.html" title="">404</a></li>
-                                            <li><a href="../front/pages/comingsoon.html" title="">Comingsoon</a></li>
-                                        </ul>
+                                        <a href="/cars" title="">Car</a>
                                     </li>
                                     <li>
-                                        <a href="#" title="">Hotel</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-hotel.html" title="">Hotel</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/hotel-list.html">Hotel List 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/hotel-list-2.html">Hotel List 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/hotel-maps.html">Hotel Map</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/hotel-detail.html">Hotel Detail</a>
-                                            </li>
-                                        </ul>
+                                        <a href="/login" title="">Login</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="">Flights</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-flight.html" title="">Flights</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/flight-list.html">Flight List</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="">Car</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-car.html" title="">Car</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/car-list.html">Cart List</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="">Package</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-package.html" title="">Package Deals</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/package-list.html">Package Deals List</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="">Cruises</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-cruise.html" title="">Cruises</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/cruise-list.html">Cruise List</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/cruise-detail.html">Cruise Detail</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="">Tours</a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="../front/pages/home-tour.html" title="">Tours</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/tour-list.html">Tour List</a>
-                                            </li>
-                                            <li>
-                                                <a href="../front/pages/tour-detail.html">Tour Detail</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>

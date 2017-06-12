@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 /**
  * Class PageController
  *
@@ -20,14 +21,20 @@ class PageController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['only' => ['getLogin','landingpage']]);
-
+        $this->middleware('guest', ['only' => ['landingpage', 'cars', 'getLogin', 'signup']]);
     }
 
-    public function getLogin()
+    public function landingpage()
     {
-        return view('login');
+        return view('landingpage');
+
     }
+    public function cars()
+    {
+        return view('cars-list');
+
+    }
+
     /**
      * @return string
      */
@@ -35,16 +42,47 @@ class PageController extends Controller
     {
         return csrf_token();
     }
-    public function backoffice()
+
+    public function signup()
+    {
+        return view('signup');
+
+    }
+
+    public function getLogin()
+    {
+        return view('login');
+    }
+
+    public function pendaftaran()
     {
         return view('welcome');
 
     }
-    public function landingpage()
+
+    public function confirm($confirmation_code)
     {
-        return view('landingpage');
+        $users = \DB::table('users')
+            ->where('confirmation_code', $confirmation_code)
+            ->count();
 
+        if ($users == 0) {
+            session()->flash('auth_message', 'maaf user konfirmasi email tidak berlaku lagi');
+            return redirect()->route('login');
+
+        } else {
+            $user = \DB::table('users')
+                ->where('confirmation_code', $confirmation_code)
+                ->first();
+            $userupdate = User::find($user->id);
+
+            $userupdate->is_aktif = 1;
+            $userupdate->confirmation_code = 0;
+            $userupdate->save();
+            session()->flash('auth_messagee', 'User berhasil dikonfirmasi ');
+            return redirect()->route('login');
+
+        }
     }
-
 
 }

@@ -72,6 +72,7 @@
                 Keep me signed in
               </label>
             </div>
+            <a class="btn btn-primary" href="/"><i class="fa fa-arrow-circle-left"></i> Home</a>
             <button type="submit" class="btn btn-primary pull-right">
               Login <i class="fa fa-arrow-circle-right"></i>
             </button>
