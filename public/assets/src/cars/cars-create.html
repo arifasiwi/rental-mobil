@@ -31,26 +31,16 @@
 									<span class="error text-small block" ng-if="Form.no_plat.$dirty && Form.no_plat.$invalid">First Name is required</span>
 									<span class="success text-small" ng-if="Form.no_plat.$valid">Thank You!</span>
 								</div>
-								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
+
+								<div class="form-group" ng-class="{'has-error':Form.color.$dirty && Form.color.$invalid, 'has-success':Form.color.$valid}">
 									<label class="control-label">
-										 Type <span class="symbol required"></span>
+										Color <span class="symbol required"></span>
 									</label>
-									<input type="text" placeholder="Enter your Type" class="form-control" name="type" ng-model="myModel.type"
-									 required />
-									<span class="error text-small block" ng-if="Form.type.$dirty && Form.type.$invalid">First Type is required</span>
-									<span class="success text-small" ng-if="Form.type.$valid">Thank You!</span>
+									<input type="text" placeholder="Enter your Class" class="form-control" name="color" ng-model="myModel.color"
+										   required />
+									<span class="error text-small block" ng-if="Form.color.$dirty && Form.color.$invalid">First Color is required</span>
+									<span class="success text-small" ng-if="Form.color.$valid">Thank You!</span>
 								</div>
-
-								<!--<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
-									<label class="control-label">
-										Email <span class="symbol required"></span>
-									</label>
-									<input type="email" placeholder="Enter a valid E-mail" class="form-control" name="email" ng-model="myModel.email" required>
-									<span class="error text-small block" ng-if="Form.email.$dirty && Form.email.$error.required">Email is required.</span>
-									<span class="error text-small block" ng-if="Form.email.$error.email">Please, enter a valid email address.</span>
-									<span class="success text-small" ng-if="Form.email.$valid">It's a valid e-mail!</span>
-								</div>-->
-
 								<div class="form-group" ng-class="{'has-error':Form.merk.$dirty && Form.merk.$invalid, 'has-success':Form.merk.$valid}">
 									<label class="control-label">
 										Merk <span class="symbol required"></span>
@@ -61,14 +51,30 @@
 									<span class="success text-small" ng-if="Form.merk.$valid">Thank You!</span>
 								</div>
 
-								<div class="form-group" ng-class="{'has-error':Form.color.$dirty && Form.color.$invalid, 'has-success':Form.color.$valid}">
+								<div class="form-group" ng-class="{'has-error':Form.foto.$dirty && Form.foto.$invalid, 'has-success':Form.foto.$valid}">
 									<label class="control-label">
-										Color <span class="symbol required"></span>
+										Foto <span class="symbol required"></span>
 									</label>
-									<input type="text" placeholder="Enter your Class" class="form-control" name="color" ng-model="myModel.color"
+									<input type="text" placeholder="Enter your Class" class="form-control" name="foto" ng-model="myModel.foto"
 										   required />
-									<span class="error text-small block" ng-if="Form.color.$dirty && Form.color.$invalid">First Color is required</span>
-									<span class="success text-small" ng-if="Form.color.$valid">Thank You!</span>
+									<span class="error text-small block" ng-if="Form.foto.$dirty && Form.foto.$invalid">First Foto is required</span>
+									<span class="success text-small" ng-if="Form.foto.$valid">Thank You!</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
+									<label class="control-label">
+										Type <span class="symbol required"></span>
+									</label>
+									<select class="form-control" name="type" ng-model="myModel.type" required>
+										<option value="" disabled selected>Silahkan pilih Merk</option>
+										<option value="Sedan">Sedan</option>
+										<option value="Hatchback">Hatchback</option>
+										<option value="Hatchback">Hatchback</option>
+										<option value="MPV">MPV</option>
+										<option value="SUV">SUV</option>
+										<option value="Hybrid">Hybrid</option>
+									</select>
+									<span class="error text-small block" ng-if="Form.type.$dirty && Form.type.$invalid">First Type is required</span>
+									<span class="success text-small" ng-if="Form.type.$valid">Thank You!</span>
 								</div>
 
 							</fieldset>

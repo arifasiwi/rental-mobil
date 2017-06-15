@@ -49,6 +49,7 @@
                     <th class="col-md-2">No.Plat</th>
                     <th class="col-md-2">Type</th>
                     <th class="col-md-2">Merk</th>
+                    <th class="col-md-2">View</th>
                     <th class="col-md-2">Aksi</th>
                 </tr>
                 </thead>
@@ -56,9 +57,10 @@
                 <tr ng-repeat="row in dataCars">
                     <td  class="col-md-1">{{$index +1}}</td>
                     <td class="col-md-2">{{row.color}}</td>
-                    <td class="col-md-2">{{row.no.plat}}</td>
+                    <td class="col-md-2">{{row.no_plat}}</td>
                     <td class="col-md-2">{{row.type}}</td>
                     <td class="col-md-2">{{row.merk}}</td>
+                    <td class="col-md-2"><img src="{{row.foto}}" style="height: 100px; width: 100px;"></td>
 
 
                     <td class="col-md-2">

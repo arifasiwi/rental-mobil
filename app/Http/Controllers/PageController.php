@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Repositories\CarsRepository;
 
 /**
  * Class PageController
@@ -19,19 +20,21 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function __construct()
+    public function __construct(CarsRepository $cars)
     {
-        $this->middleware('guest', ['only' => ['landingpage', 'cars', 'getLogin', 'signup']]);
+        $this->middleware('guest', ['only' => [ 'getLogin', 'signup']]);
+        $this->cars = $cars;
     }
 
     public function landingpage()
     {
         return view('landingpage');
 
-    }
-    public function cars()
-    {
-        return view('cars-list');
+//        $getlist = $this->jurusan->getList();
+//         dump($getlist);
+//        return view('landingpage')->with([
+//            'getlist' => $getlist
+//        ]);
 
     }
 
@@ -48,6 +51,17 @@ class PageController extends Controller
         return view('signup');
 
     }
+    public function cars()
+    {
+        
+        $getlist = $this->cars->getList();
+//         dump($getlist);
+        return view('cars-list')->with([
+            'getlistsedan' => $getlist
+        ]);
+
+
+    }
 
     public function getLogin()
     {
@@ -55,6 +69,11 @@ class PageController extends Controller
     }
 
     public function pendaftaran()
+    {
+        return view('welcome');
+
+    }
+    public function backoffice()
     {
         return view('welcome');
 

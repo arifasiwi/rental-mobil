@@ -4,9 +4,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Car List</title>
+    <title>Home Car</title>
     <!-- Font Google -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600' rel='stylesheet' type='text/css'>
     <!-- End Font Google -->
     <!-- Library CSS -->
     <link rel="stylesheet" href="../front/css/library/font-awesome.min.css">
@@ -29,12 +29,13 @@
 </div>
 <!-- Wrap -->
 <div id="wrap">
+
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
             <!-- Logo -->
             <div class="logo float-left">
-                <a href="../front/pages/index.html" title=""><img src="../front/images/logo-header.png" alt=""></a>
+                <a href="index.html" title=""><img src="../front/images/logo-header.png" alt=""></a>
             </div>
             <!-- End Logo -->
             <!-- Bars -->
@@ -49,7 +50,7 @@
                         <div class="tb-cell">
                             <ul class="menu-list text-uppercase">
                                 <li >
-                                    <a href="/" title="">Home</a>
+                                    <a href="/landingpage" title="">Home</a>
                                 </li>
                                 <li class="current-menu-parent">
                                     <a href="/cars" title="">Car</a>
@@ -57,9 +58,7 @@
                                 <li>
                                     <a href="/login" title="">Login</a>
                                 </li>
-
                             </ul>
-
                         </div>
                     </div>
                 </div>
@@ -70,625 +69,666 @@
     <!-- End Header -->
 
     <!--Banner-->
-    <section class="sub-banner">
+    <section class="banner">
         <!--Background-->
         <div class="bg-parallax bg-1"></div>
+        <div class="overlay"></div>
         <!--End Background-->
-        <!-- Logo -->
-        <div class="logo-banner text-center">
-            <a href="" title="">
-                <img src="../front/images/logo-banner.png" alt="">
-            </a>
+        <div class="container">
+            <!-- Banner Content -->
+            <div class="banner-cn">
+                <!-- Logo -->
+                <div class="logo-banner text-center">
+                    <a href="" title="">
+                        <img src="../front/images/logo-banner.png" alt="">
+                    </a>
+                </div>
+                <!-- Logo -->
+                <!-- Category Singer -->
+                <div class="category-singer clearfix">
+                    <div class="cate-singer-icon float-left">
+                        <h2>Cruise</h2>
+                        <img src="../front/images/icon-cruise.png" alt="">
+                    </div>
+                    <p>Choose from more than <span>5,000</span> car worldwide</p>
+                </div>
+                <!-- End Category Singer -->
+                <!-- Form Search -->
+                <div class="form-cn form-car">
+                    <h2>Where would you like to go?</h2>
+                    <div class="form-search clearfix">
+                        <div class="form-field field-picking">
+                            <label for="picking"><span>Picking up:</span> City, airport...</label>
+                            <input type="text" id="picking" class="field-input">
+                        </div>
+                        <div class="form-field field-droping">
+                            <input type="text" class="field-input" placeholder="Droping off">
+                        </div>
+                        <div class="form-field field-date">
+                            <input type="text" class="field-input calendar-input" placeholder="Pink up date">
+                        </div>
+                        <div class="form-field field-date">
+                            <input type="text" class="field-input calendar-input" placeholder="Drop off date">
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="awe-btn awe-btn-lager awe-search">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Form Search -->
+            </div>
+            <!-- End Banner Content -->
         </div>
-        <!-- Logo -->
+
     </section>
     <!--End Banner-->
-    <!-- Main -->
-    <div class="main">
-        <div class="container">
-            <div class="main-cn car-page bg-white clearfix">
-                <div class="row">
 
-                    <!-- Cruise Right -->
-                    <div class="col-md-9 col-md-push-3">
-
-                        <!-- Breakcrumb -->
-                        <section class="breakcrumb-sc">
-                            <ul class="breadcrumb arrow">
-                                <li><a href="../front/pages/index.html"><i class="fa fa-home"></i></a></li>
-                                <li><a href="../front/pages/hotel.html" title="">Hotels</a></li>
-                                <li><a href="#" title="">Europe </a></li>
-                                <li>Netherlands</li>
-                            </ul>
-                        </section>
-                        <!-- End Breakcrumb -->
-
-                        <section class="car-list">
-                            <!-- Top List -->
-                            <div class="top-list-car clearfix">
-                                    <span class="float-left">
-                                        Total includes taxes and fees
-                                    </span>
-                                <div class="navigation-car float-right">
-                                    <p>1 - 7 out of 16</p>
-                                    <a href="" class="awe-btn awe-btn-5 awe-btn-medium arrow-left text-uppercase">Prev</a>
-                                    <a href="" class="awe-btn awe-btn-5 awe-btn-medium arrow-right text-uppercase">Next</a>
-                                </div>
-                            </div>
-                            <!-- End Top List -->
-                            <!-- List Content -->
-                            <div class="car-list-cn">
-                                <div class="responsive-table">
-                                    <table class="table car-list-table text-center">
-                                        <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th><img src="../front/images/car/icon-car/icon-1.png" alt=""></th>
-                                            <th><img src="../front/images/car/icon-car/icon-2.png" alt=""></th>
-                                            <th><img src="../front/images/car/icon-car/icon-3.png" alt=""></th>
-                                            <th><img src="../front/images/car/icon-car/icon-4.png" alt=""></th>
-                                            <th><img src="../front/images/car/icon-car/icon-5.png" alt=""></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-1.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Economy</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-3.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Compact</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-4.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Midsize</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-5.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Standard</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-6.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Full size</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-6.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Midsize SUV</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-7.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Mini Van</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-8.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Standard SUV</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-9.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Luxury</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-car">
-                                                <figure>
-                                                    <a href="">
-                                                        <img src="../front/images/car/img-10.jpg" alt="">
-                                                    </a>
-                                                    <figcaption>Premium SUV</figcaption>
-
-                                                </figure>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                            <td class="td-price">
-                                                <div class="price-box">
-                                                    <span class="price"><ins>$85</ins></span>
-                                                    <span class="price night">$61<small>/daily</small></span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- End List Content -->
-                        </section>
-                    </div>
-                    <!-- End Cruise Right -->
-
-                    <!-- Sidebar Hotel -->
-                    <div class="col-md-3 col-md-pull-9">
-                        <!-- Sidebar Content -->
-                        <div class="sidebar-cn">
-
-                            <!-- Search Result -->
-                            <div class="search-result">
-                                <p>
-                                    We found <br>
-                                    <ins>640</ins> <span>properties availability</span>
-                                </p>
-                            </div>
-                            <!-- End Search Result -->
-                            <!-- Search Form Sidebar -->
-                            <div class="search-sidebar">
-                                <div class="row">
-                                    <div class="form-search clearfix">
-                                        <div class="form-field col-md-12">
-                                            <label for="picking"><span>Picking up:</span> City, airport...</label>
-                                            <input type="text" name="picking" id="picking" value="" class="field-input">
-                                        </div>
-                                        <div class="form-field col-md-12">
-                                            <label for="droping"><span>Droping off:</span> City, airport...</label>
-                                            <input type="text" name="droping" id="droping" value="" class="field-input">
-                                        </div>
-                                        <div class="form-field field-date col-md-12">
-                                            <input type="text" name="pickdate" class="field-input calendar-input" placeholder="Pick up date">
-                                        </div>
-                                        <div class="form-field field-date col-md-12">
-                                            <input type="text" name="dropdate" class="field-input calendar-input" placeholder="Drop off date">
-                                        </div>
-                                        <div class="form-submit col-md-12">
-                                            <button type="submit" class="awe-btn awe-btn-medium awe-search">Search</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Search Form Sidebar -->
-                            <!-- Narrow your results -->
-                            <div class="narrow-results">
-                                <h6>Narrow your results</h6>
-                                <div class="narrow-form">
-                                    <form action="action" method="get">
-                                        <input type="text" name="" class="narrow-input" placeholder="Property name contains:">
-                                        <button class="submit-narrow"></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- End Narrow your results -->
-                            <!-- Depart times Slider -->
-                            <div class="widget-sidebar price-slider-sidebar">
-                                <h4 class="title-sidebar">Depart times</h4>
-                                <div class="slider-sidebar time-slider" data-start="0" data-end="1440" id="price-slider">
-                                    <input type="text" class="range" />
-                                </div>
-                            </div>
-                            <!-- End Depart times Slider -->
-                            <!-- Return times Slider -->
-                            <div class="widget-sidebar price-slider-sidebar">
-                                <h4 class="title-sidebar">Return times</h4>
-                                <div class="slider-sidebar time-slider" data-start="0" data-end="1440" id="price-slider2">
-                                    <input type="text" class="range" />
-                                </div>
-                            </div>
-                            <!-- End Return times Slider -->
-                            <!-- Cars -->
-                            <div class="widget-sidebar facilities-sidebar">
-                                <h4 class="title-sidebar">Cruise line</h4>
-                                <ul class="widget-ul">
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-1" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-1">AVIS</label>
-                                        </div>
-                                        <span>$2,120</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-2" type="checkbox" class="checkbox" checked />
-                                            <label for="checkbox-2">Budget</label>
-                                        </div>
-                                        <span>$1,027</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-3" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-3">Hertz</label>
-                                        </div>
-                                        <span>$863</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-4" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-4">Enterprise</label>
-                                        </div>
-                                        <span>$2,120</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-5" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-5">Advantage</label>
-                                        </div>
-                                        <span>$1,027</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-6" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-6">E-Z car</label>
-                                        </div>
-                                        <span>$863</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-7" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-7">Firefly</label>
-                                        </div>
-                                        <span>$2,120</span>
-                                    </li>
-                                    <li>
-                                        <div class="radio-checkbox">
-                                            <input id="checkbox-8" type="checkbox" class="checkbox" />
-                                            <label for="checkbox-8">Thrifty</label>
-                                        </div>
-                                        <span>$1,027</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- End Cars -->
-
-                        </div>
-                        <!-- End Sidebar Content -->
-                    </div>
-                    <!-- End Sidebar Hotel -->
-
+    <!-- Car Deals -->
+    <section class="cruise-deals">
+        <!-- Title -->
+        <div class="title-wrap">
+            <div class="container">
+                <div class="travel-title float-left">
+                    <h2>Daftar Mobil Yang Disewakan</h2>
+                    {{--<span class="span-departure">Choose your departure</span>--}}
+                    {{--<div class="select">--}}
+                        {{--<span data-placeholder="">Las Vegas - Nevada</span>--}}
+                        {{--<select name="departure">--}}
+                            {{--<option>Las Vegas - Nevada</option>--}}
+                            {{--<option>Las Vegas - Nevada</option>--}}
+                            {{--<option>Las Vegas - Nevada</option>--}}
+                            {{--<option>Las Vegas - Nevada</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
                 </div>
+            </div>
+        </div>
+        <!-- End Title -->
+        <!-- Cruise Deals Content -->
+        <div class="container">
+            <div class="cruise-deals-cn clearfix">
+                <!-- Cruise Deal Item -->
+                @foreach($getlistsedan as $sedan)
+
+
+                <div class="col-xs-6 col-md-4 col-lg-3">
+                    <div class="cruise-deal-item">
+                        <figure class="cruise-img">
+                            <a href="" title="">
+                                <img src="{{$sedan['foto']}}" alt="">
+                            </a>
+                        </figure>
+                        <div class="cruise-text">
+                            <div class="cruise-name">
+                                <a href="#" title="">{{$sedan['merk']}}</a>
+                            </div>
+                            <div class="cruise-night">
+                                <span>{{$sedan['type']}}</span>
+                            </div>
+                            <hr class="hr">
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+                <!-- End Cruise Deal Item -->
+                <!-- Cruise Deal Item -->
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-10.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">HongKong</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-11.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">Barcelona</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-12.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">Bangkok</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-13.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">Amsterdam</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-14.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">HongKong</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-15.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">Barcelona</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- End Cruise Deal Item -->--}}
+                {{--<!-- Cruise Deal Item -->--}}
+                {{--<div class="col-xs-6 col-md-4 col-lg-3">--}}
+                    {{--<div class="cruise-deal-item">--}}
+                        {{--<figure class="cruise-img">--}}
+                            {{--<a href="" title="">--}}
+                                {{--<img src="../front/images/deal/img-16.jpg" alt="">--}}
+                            {{--</a>--}}
+                        {{--</figure>--}}
+                        {{--<div class="cruise-text">--}}
+                            {{--<div class="cruise-name">--}}
+                                {{--<a href="#" title="">Bangkok</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="cruise-night">--}}
+                                {{--<span>9 nights</span> - 05/12 - 12/14--}}
+                            {{--</div>--}}
+                            {{--<hr class="hr">--}}
+                            {{--<div class="price-box">--}}
+                                {{--<span class="price old-price">Only  <del>$269</del></span>--}}
+                                {{--<span class="price special-price">$175</span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                <!-- End Cruise Deal Item -->
+            </div>
+        </div>
+        <!-- End Cruise Deals Content -->
+    </section>
+    <!-- End Car Deals -->
+
+    <!-- Travel Destinations -->
+    <section class="destinations">
+
+        {{--<!-- Title -->--}}
+        {{--<div class="title-wrap">--}}
+            {{--<div class="container">--}}
+                {{--<div class="travel-title float-left">--}}
+                    {{--<h2>Top Travel Destinations</h2>--}}
+                {{--</div>--}}
+                {{--<a href="#" title="" class="awe-btn awe-btn-5 arrow-right awe-btn-lager text-uppercase float-right">view all</a>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        <!-- End Title -->
+
+        <!-- Destinations Content -->
+        {{--<div class="destinations-cn">--}}
+
+            {{--<!-- Background -->--}}
+            {{--<div class="bg-parallax bg-2"></div>--}}
+            {{--<!-- End Background -->--}}
+
+            {{--<div class="container">--}}
+                {{--<div class="row">--}}
+                    {{--<!-- Destinations Filter -->--}}
+                    {{--<div class="col-md-4 col-lg-3">--}}
+                        {{--<div class="intro-filter">--}}
+                            {{--<div class="intro">--}}
+                                {{--<p>--}}
+                                    {{--<small>Discover</small><br>--}}
+                                    {{--<span>2364</span> destinations--}}
+                                {{--</p>--}}
+                                {{--<p>--}}
+                                    {{--<small>With</small><br>--}}
+                                    {{--<span>152,364</span> properties--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                            {{--<ul class="filter">--}}
+                                {{--<li class="active">--}}
+                                    {{--<a data-toggle="tab" href="#destinations-1"><i class="fa fa-map-marker"></i> Recommendation for you</a>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a data-toggle="tab" href="#destinations-2"><i class="fa fa-map-marker"></i> Australia &amp; Oceania</a>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a data-toggle="tab" href="#destinations-3"><i class="fa fa-map-marker"></i> Asia</a>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a data-toggle="tab" href="#destinations-4"><i class="fa fa-map-marker"></i> Europe</a>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a data-toggle="tab" href="#destinations-5"><i class="fa fa-map-marker"></i> USA &amp; Canada</a>--}}
+                                {{--</li>--}}
+                                {{--<li>--}}
+                                    {{--<a data-toggle="tab" href="#destinations-6"><i class="fa fa-map-marker"></i> The rest of the world</a>--}}
+                                {{--</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+
+                    {{--</div>--}}
+                    {{--<!-- End Destinations Filter -->--}}
+                    {{--<!-- Destinations Grid -->--}}
+                    {{--<div class="col-md-8 col-lg-9">--}}
+                        {{--<div class="tab-content destinations-grid">--}}
+                            {{--<!-- Tab One -->--}}
+                            {{--<div id="destinations-1" class="clearfix tab-pane fade active in ">--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item ">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">London - UK</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--<ins>1289</ins> properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-1.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Paris - France</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--239 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-2.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Rome - Italy</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--478 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-3.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Barcelona - Spain</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--452 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-4.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Madrid - Spain</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--794 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-5.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Vienna - Austria</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--1289 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-6.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                            {{--</div>--}}
+                            {{--<!-- End Tab One -->--}}
+                            {{--<!-- Tab Two -->--}}
+                            {{--<div id="destinations-2" class="clearfix tab-pane fade">--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item ">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">London - UK</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--<ins>1289</ins> properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-1.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Paris - France</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--239 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-2.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Rome - Italy</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--478 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-3.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Barcelona - Spain</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--452 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-4.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Madrid - Spain</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--794 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-5.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                                {{--<!-- Destinations Item -->--}}
+                                {{--<div class="col-xs-6 col-sm-4 col-md-6 col-lg-4">--}}
+                                    {{--<div class="destinations-item">--}}
+                                        {{--<div class="destinations-text">--}}
+                                            {{--<div class="destinations-name">--}}
+                                                {{--<a href="" title="">Vienna - Austria</a>--}}
+                                            {{--</div>--}}
+                                                {{--<span class="properties-nb">--}}
+                                                    {{--1289 properties--}}
+                                                {{--</span>--}}
+                                        {{--</div>--}}
+                                        {{--<figure class="destinations-img">--}}
+                                            {{--<a href="" title="">--}}
+                                                {{--<img src="../front/images/destinations/img-6.jpg" alt="">--}}
+                                            {{--</a>--}}
+                                        {{--</figure>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- End Destinations Item -->--}}
+                            {{--</div>--}}
+                            {{--<!-- End Tab Two -->--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<!-- ENd Destinations Grid -->--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        <!-- End Destinations Content -->
+    </section>
+    <!-- End Travel Destinations -->
+
+    <!-- Confidence and Subscribe  -->
+    <section class="confidence-subscribe no-bg">
+        <div class="container">
+            <div class="row cs-sb-cn">
+
+                <!-- Confidence -->
+                <div class="col-md-6">
+                    <div class="confidence">
+                        <h3>Book with confidence</h3>
+                        <ul>
+                            <li>
+                                <span class="label-nb">01</span>
+                                <h5>No booking charges</h5>
+                                <p>We don't charge you an extra fee for booking a hotel room with us</p>
+                            </li>
+                            <li>
+                                <span class="label-nb">02</span>
+                                <h5>No cancellation fees</h5>
+                                <p>We don't charge you a cancellation or modification fee in case plans change</p>
+                            </li>
+                            <li>
+                                <span class="label-nb">03</span>
+                                <h5>Instant confirmation</h5>
+                                <p>Instant booking confirmation whether booking online or via the telephone</p>
+                            </li>
+                            <li>
+                                <span class="label-nb">04</span>
+                                <h5>Flexible booking</h5>
+                                <p>You can book up to a whole year in advance until the moment of your stay</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Confidence -->
+                <!-- Subscribe -->
+                <div class="col-md-6">
+                    <div class="subscribe">
+                        <h3>Subscribe to our newsletter</h3>
+                        <p>Enter your email address and we’ll send you our regular promotional emails, packed with special offers, great deals, and huge discounts</p>
+                        <!-- Subscribe Form -->
+                        <div class="subscribe-form">
+                            <form action="#" method="get">
+                                <input type="text" name="" value="" placeholder="Your email" class="subscribe-input">
+                                <button type="submit" class="awe-btn awe-btn-5 arrow-right text-uppercase awe-btn-lager">subcrible</button>
+                            </form>
+                        </div>
+                        <!-- End Subscribe Form -->
+                        <!-- Follow us -->
+                        <div class="follow-us">
+                            <h4>Follow us</h4>
+                            <div class="follow-group">
+                                <a href="https://www.facebook.com/putripengenketemudy" title=""><i class="fa fa-facebook"></i></a>
+                                <a href="" title=""><i class="fa fa-twitter"></i></a>
+                                <a href="" title=""><i class="fa fa-pinterest"></i></a>
+                                <a href="" title=""><i class="fa fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/arifasiwi" title=""><i class="fa fa-instagram"></i></a>
+                                <a href="" title=""><i class="fa fa-google-plus"></i></a>
+                                <a href="" title=""><i class="fa fa-digg"></i></a>
+                            </div>
+                        </div>
+                        <!-- Follow us -->
+                    </div>
+                </div>
+                <!-- End Subscribe -->
 
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End Confidence and Subscribe  -->
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -696,7 +736,7 @@
                 <!-- Logo -->
                 <div class="col-md-4">
                     <div class="logo-foter">
-                        <a href="../front/pages/index.html" title=""><img src="../front/images/logo-footer.png" alt=""></a>
+                        <a href="index.html" title=""><img src="../front/images/logo-footer.png" alt=""></a>
                     </div>
                 </div>
                 <!-- End Logo -->
@@ -704,10 +744,10 @@
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <div class="ul-ft">
                         <ul>
-                            <li><a href="../front/pages/about.html" title="">About</a></li>
-                            <li><a href="../front/pages/blog.html" title="">Blog</a></li>
-                            <li><a href="../front/pages/fqa.html" title="">FQA</a></li>
-                            <li><a href="../front/pages/careers.html" title="">Carrers</a></li>
+                            <li><a href="about.html" title="">About</a></li>
+                            <li><a href="blog.html" title="">Blog</a></li>
+                            <li><a href="fqa.html" title="">FQA</a></li>
+                            <li><a href="careers.html" title="">Carrers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -716,7 +756,7 @@
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <div class="ul-ft">
                         <ul>
-                            <li><a href="../front/pages/contact.html" title="">Contact Us</a></li>
+                            <li><a href="contact.html" title="">Contact Us</a></li>
                             <li><a href="#" title="">Privacy Policy</a></li>
                             <li><a href="#" title="">Term of Service</a></li>
                             <li><a href="#" title="">Security</a></li>
@@ -764,7 +804,7 @@
                     <!-- End Currency -->
                     <!--CopyRight-->
                     <p class="copyright">
-                        © 2009 – 2014 Bookyourtrip™ All rights reserved.
+                        © 2017 Travel Rajawali.
                     </p>
                     <!--CopyRight-->
                 </div>
@@ -773,6 +813,7 @@
         </div>
     </footer>
     <!-- End Footer -->
+
 </div>
 
 <!-- Library JS -->
@@ -792,3 +833,4 @@
 <!-- End Main Js -->
 </body>
 </html>
+

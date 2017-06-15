@@ -14,7 +14,7 @@ class Cars extends Model
      * @var array
      */
     protected $fillable = [
-        'no_plat', 'type', 'merk', 'color',
+        'no_plat', 'type', 'merk', 'color', 'foto',
     ];
 
 }

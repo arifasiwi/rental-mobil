@@ -19,6 +19,7 @@ class CreateCarsTable extends Migration
             $table->string('type');
             $table->string('merk');
             $table->string('color');
+            $table->string('foto');
             $table->timestamps();
         });
     }

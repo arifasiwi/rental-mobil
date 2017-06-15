@@ -31,15 +31,6 @@
 									<span class="error text-small block" ng-if="Form.no_plat.$dirty && Form.no_plat.$invalid">First Name is required</span>
 									<span class="success text-small" ng-if="Form.no_plat.$valid">Thank You!</span>
 								</div>
-								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
-									<label class="control-label">
-										 Type <span class="symbol required"></span>
-									</label>
-									<input type="text" placeholder="Enter your Type" class="form-control" name="type" ng-model="myModel.type"
-									 required />
-									<span class="error text-small block" ng-if="Form.type.$dirty && Form.type.$invalid">First Type is required</span>
-									<span class="success text-small" ng-if="Form.type.$valid">Thank You!</span>
-								</div>
 
 								<!--<div class="form-group" ng-class="{'has-error':Form.email.$dirty && Form.email.$invalid, 'has-success':Form.email.$valid}">
 									<label class="control-label">
@@ -69,6 +60,31 @@
 										   required />
 									<span class="error text-small block" ng-if="Form.color.$dirty && Form.color.$invalid">First Color is required</span>
 									<span class="success text-small" ng-if="Form.color.$valid">Thank You!</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.foto.$dirty && Form.foto.$invalid, 'has-success':Form.foto.$valid}">
+									<label class="control-label">
+										Foto <span class="symbol required"></span>
+									</label>
+									<input type="text" placeholder="Enter your Class" class="form-control" name="foto" ng-model="myModel.foto"
+										   required />
+									<span class="error text-small block" ng-if="Form.foto.$dirty && Form.foto.$invalid">First Foto is required</span>
+									<span class="success text-small" ng-if="Form.foto.$valid">Thank You!</span>
+								</div>
+								<div class="form-group" ng-class="{'has-error':Form.type.$dirty && Form.type.$invalid, 'has-success':Form.type.$valid}">
+									<label class="control-label">
+										Type <span class="symbol required"></span>
+									</label>
+									<select class="form-control" name="type" ng-model="myModel.type" required>
+										<option value="" disabled selected>Silahkan pilih Merk</option>
+										<option value="Sedan">Sedan</option>
+										<option value="Hatchback">Hatchback</option>
+										<option value="Hatchback">Hatchback</option>
+										<option value="MPV">MPV</option>
+										<option value="SUV">SUV</option>
+										<option value="Hybrid">Hybrid</option>
+									</select>
+									<span class="error text-small block" ng-if="Form.type.$dirty && Form.type.$invalid">First Type is required</span>
+									<span class="success text-small" ng-if="Form.type.$valid">Thank You!</span>
 								</div>
 
 							</fieldset>

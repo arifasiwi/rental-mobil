@@ -70,7 +70,8 @@ class CarsRepository extends AbstractRepository implements CarsInterface, Crudab
             'no_plat'    => e($data['no_plat']),
             'type'   => e($data['type']),
             'merk' => e($data['merk']),
-            'color'   => e($data['color'])
+            'color'   => e($data['color']),
+            'foto'   => e($data['foto'])
         ]);
 
     }
@@ -86,6 +87,7 @@ class CarsRepository extends AbstractRepository implements CarsInterface, Crudab
             'no_plat'    => e($data['no_plat']),
             'type'   => e($data['type']),
             'merk' => e($data['merk']),
+            'foto'   => e($data['foto']),
             'color'   => e($data['color'])
         ]);
     }
@@ -108,6 +110,17 @@ class CarsRepository extends AbstractRepository implements CarsInterface, Crudab
     public function findById($id, array $columns = ['*'])
     {
         return parent::find($id, $columns);
+    }
+    public function getList()
+    {
+        // Query ke sql.
+        $akun = $this->model->get()->toArray();
+        // Jika data null.
+        if (null == $akun) {
+            // Set header respon tidak ditemukan.
+            return $this->errorNotFound('Data belum tersedia');
+        }
+        return $akun;
     }
 
 }

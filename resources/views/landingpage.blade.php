@@ -56,7 +56,7 @@
                             <div class="tb-cell">
                                 <ul class="menu-list text-uppercase">
                                     <li class="current-menu-parent">
-                                        <a href="/" title="">Home</a>
+                                        <a href="/landingpage" title="">Home</a>
                                     </li>
                                     <li>
                                         <a href="/cars" title="">Car</a>
@@ -64,7 +64,6 @@
                                     <li>
                                         <a href="/login" title="">Login</a>
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
